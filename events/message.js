@@ -55,7 +55,7 @@ module.exports = {
           }
         }
 
-        if (cmd.ownerOnly && !owners.includes(message.author.id)) {
+        if (cmd.owner && !owners.includes(message.author.id)) {
           return;
         }
 
@@ -94,7 +94,7 @@ module.exports = {
           }
         }
 
-        if (cmd.nsfwOnly && cmd.nsfwOnly === true && !message.channel.nsfw) {
+        if (cmd.nsfw && cmd.nsfw === true && !message.channel.nsfw) {
           const embed = bot.buildEmbed(message)
           .setTitle(lang.HELP.NSFW_ONLY)
           .setImage(`https://support.discord.com/hc/article_attachments/360007795191/2_.jpg`);

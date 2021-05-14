@@ -11,15 +11,15 @@ const { mongodbUri } = require("../config.json");
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("Connected to mongoDB!");
+    console.log("[DB] Connected to mongoDB!");
   } catch (e) {
-    Logger.error("db", e);
+    console.error(`[DB] ${e}`);
   }
 
   connection.on("disconnected", () => {
-    console.log("Disconnected from mongoDB!");
+    console.log("[DB] Disconnected from mongoDB!");
   });
   connection.on("reconnected", () => {
-    console.log("Reconnected to mongoDB!");
+    console.log("[DB] Reconnected to mongoDB!");
   });
 })();

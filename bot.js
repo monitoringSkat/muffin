@@ -9,8 +9,7 @@ const bot = new Client({
     "GUILD_MEMBER",
     "MESSAGE",
     "USER",
-    "REACTION",
-    "CHANNEL"
+    "REACTION"
   ],
 });
 Constants.DefaultOptions.ws.properties.$browser = "Discord Android";
@@ -25,9 +24,9 @@ bot.cooldowns = new Collection();
 bot.player = new Player(bot, {
   autoSelfDeaf: true,
   leaveOnEnd: true,
-  leaveOnEndCooldown: 60000,
+  leaveOnEndCooldown: 300000,
   leaveOnEmpty: true,
-  leaveOnEmptyCooldown: 60000,
+  leaveOnEmptyCooldown: 300000,
   leaveOnStop: true,
   enableLive: true,
   fetchBeforeQueued: true
