@@ -1,8 +1,11 @@
 {
   "name": "muffin",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Yet another Discord bot.",
   "main": "./bot.js",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./bot.js",
@@ -16,7 +19,7 @@
     "bufferutil": "^4.0.3",
     "dayjs": "^1.10.4",
     "discord-logs": "^1.9.0",
-    "discord-player": "^4.0.8",
+    "discord-player": "^4.1.0",
     "discord-temp-channels": "^2.0.0",
     "discord.js": "^12.5.3",
     "ffmpeg": "^0.0.4",
@@ -24,7 +27,6 @@
     "glob": "^7.1.7",
     "mongoose": "^5.12.9",
     "nodemon": "^2.0.7",
-    "utf-8-validate": "^5.0.5",
     "zlib-sync": "^0.1.7"
   }
 }

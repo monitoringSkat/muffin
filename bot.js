@@ -27,9 +27,9 @@ bot.config = require("./config.json");
 bot.player = new Player(bot, {
   autoSelfDeaf: true,
   leaveOnEnd: true,
-  leaveOnEndCooldown: 50000,
+  leaveOnEndCooldown: 300000,
   leaveOnEmpty: true,
-  leaveOnEmptyCooldown: 50000,
+  leaveOnEmptyCooldown: 300000,
   leaveOnStop: true,
   enableLive: true,
   fetchBeforeQueued: true

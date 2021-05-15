@@ -6,6 +6,7 @@ module.exports = {
     if (!message.channel.permissionsFor(message.guild.me).has("SEND_MESSAGES"))
       return;
 
+    const { owners } = require("../../config.json");
     const guildId = message.guild.id;
     const userId = message.author.id;
     const cooldowns = bot.cooldowns;
@@ -13,7 +14,6 @@ module.exports = {
     const mentions = message.mentions.members;
     const disabledCommands = guild?.disabled_commands;
     const lang = await bot.getGuildLang(guildId);
-
     const ignoredChannels = guild?.ignored_channels;
     if (ignoredChannels.includes(message.channel.id)) return;
 
@@ -54,7 +54,7 @@ module.exports = {
           }
         }
 
-        if (cmd.owner && !bot.config.owners.includes(message.author.id)) {
+        if (cmd.owner && !owners.includes(message.author.id)) {
           return;
         }
 
