@@ -1,6 +1,6 @@
 {
   "name": "muffin",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Yet another Discord bot.",
   "main": "./bot.js",
   "scripts": {
@@ -23,6 +23,8 @@
     "ffmpeg-static": "^4.3.0",
     "glob": "^7.1.7",
     "mongoose": "^5.12.9",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "utf-8-validate": "^5.0.5",
+    "zlib-sync": "^0.1.7"
   }
 }

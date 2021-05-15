@@ -12,6 +12,7 @@ const bot = new Client({
     "REACTION"
   ],
 });
+
 Constants.DefaultOptions.ws.properties.$browser = "Discord Android";
 
 functions.forEach((func) => {
@@ -21,17 +22,23 @@ functions.forEach((func) => {
 bot.commands = new Collection();
 bot.aliases = new Collection();
 bot.cooldowns = new Collection();
+bot.package = require("./package.json");
+bot.config = require("./config.json");
 bot.player = new Player(bot, {
   autoSelfDeaf: true,
   leaveOnEnd: true,
-  leaveOnEndCooldown: 300000,
+  leaveOnEndCooldown: 50000,
   leaveOnEmpty: true,
-  leaveOnEmptyCooldown: 300000,
+  leaveOnEmptyCooldown: 50000,
   leaveOnStop: true,
   enableLive: true,
   fetchBeforeQueued: true
 });
 
+global.Promise = require("bluebird");
+Promise.config({
+  longStackTraces: true,
+});
 
 require("./handlers/CommandHandler")(bot);
 require("./handlers/EventHandler")(bot);

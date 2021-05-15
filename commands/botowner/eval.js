@@ -18,11 +18,6 @@ module.exports = {
       const embed = bot.buildEmbed(message)
       .setDescription(`\`\`\`js\n${evaled}\`\`\``);
 
-      if(evaled.length > 2048) {
-        console.log(evaled);
-        evaled = "Output exceeds 2048 symbols, check your console.";
-      }
-
       message.channel.send(embed);
     } catch (error) {
       const errorEmbed = bot.buildEmbed(message)

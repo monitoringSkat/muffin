@@ -1,4 +1,3 @@
-const package = require("../../package.json");
 const os = require("os");
 
 module.exports = {
@@ -12,7 +11,7 @@ module.exports = {
     const avatar = bot.user.displayAvatarURL({ dynamic: true });
 
     const embed = bot.buildEmbed(message)
-      .setAuthor(`${bot.user.username} v${package.version}`, avatar)
+      .setAuthor(`${bot.user.username} v${bot.package.version}`, avatar, `https://github.com/Tegnio/muffin/releases/tag/v${bot.package.version}`)
       .addField(lang.BOT.GENERAL_INFO,
         `
         **${lang.BOT.PLATFORM}**: ${os.type} (${os.arch})
@@ -20,7 +19,7 @@ module.exports = {
         **${lang.BOT.SHARDS}**: ${bot.formatNumber(bot.ws.totalShards)}
         **${lang.BOT.SERVERS}**: ${bot.formatNumber(bot.guilds.cache.size)}
         **${lang.BOT.USERS}**: ${bot.formatNumber(bot.users.cache.size)}
-        **${lang.BOT.COMMANDS}**: ${bot.commands.size}
+        **${lang.BOT.COMMANDS}**: ${bot.commands.filter((cmd) => cmd.category !== "botowner").size}
         **${lang.BOT.VOICE_CONNECTIONS}**: ${bot.formatNumber(bot.voice.connections.size)}
         `, true)
         

@@ -17,8 +17,10 @@ module.exports = {
     if (cmdArgs) {
       const cmd =
         bot.commands.get(cmdArgs) || bot.commands.get(bot.aliases.get(cmdArgs));
-      if (!cmd) return message.channel.send(lang.HELP.CMD_NOT_FOUND
+      if (!cmd || cmd.category === "botowner" && !bot.config.owners.includes(message.author.id)) {
+        return message.channel.send(lang.HELP.CMD_NOT_FOUND
           .replace("{command}", args.join(" ")));
+        }
 
       const description = lang.DESCRIPTIONS[cmd.name.toUpperCase()] || lang.HELP.NO_DESCRIPTION;
       const aliases = cmd.aliases
@@ -75,16 +77,16 @@ module.exports = {
 
     const embed = bot.buildEmbed(message)
       .addField(lang.HELP.GENERAL, generalCmds)
-      .addField(lang.HELP.FUN, funCmds)
+      // .addField(lang.HELP.FUN, funCmds)
       .addField(lang.HELP.MUSIC, musicCmds)
-      .addField(lang.HELP.USEFUL, usefulCmds);
-    if (nsfw) {
-      embed.addField(lang.HELP.NSFW, nsfwCmds);
-    } else {
-      embed.addField(lang.HELP.NSFW, lang.HELP.NSFW_ONLY);
-    }
+      // .addField(lang.HELP.USEFUL, usefulCmds);
+    // if (nsfw) {
+      // embed.addField(lang.HELP.NSFW, nsfwCmds);
+    // } else {
+      // embed.addField(lang.HELP.NSFW, lang.HELP.NSFW_ONLY);
+    // }
     embed
-      .addField(lang.HELP.SETTINGS, settingsCmds)
+      // .addField(lang.HELP.SETTINGS, settingsCmds)
       .setDescription(lang.HELP.HELP_DESC.replace("{prefix}", prefix))
       .setTitle(lang.HELP.HELP);
 

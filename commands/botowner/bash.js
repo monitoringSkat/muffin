@@ -19,6 +19,7 @@ module.exports = {
     if (result.length > 2000) {
       console.log(result);
       result = "Output exceeds 2000 symbols, check your console.";
+      msg.edit(result);
     } else msg.edit(result);
   },
 };

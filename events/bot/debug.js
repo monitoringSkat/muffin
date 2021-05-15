@@ -1,9 +1,8 @@
-const { debug } = require("../config.json")
-
 module.exports = {
   name: "debug",
+  type: "bot",
   execute(bot, debug) {
-    if(debug) {
+    if(bot.config.debug) {
       console.log(`[Debug] ${debug}`)
     }
   },

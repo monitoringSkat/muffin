@@ -2,7 +2,7 @@ const User = require("../models/User.model");
 const Guild = require("../models/Guild.model");
 const dayjs = require("dayjs");
 const { Message, MessageEmbed, Client } = require("discord.js");
-const { errorLogsChannelId, embedColor } = require("../config.json");
+const { embedColor } = require("../config.json");
 const fs = require("fs");
 
 /**
@@ -186,8 +186,8 @@ async function getGuildLang(guildId) {
  * @param {?string} msgContent
  */
 function sendErrorLog(bot, error, type, msgContent) {
-  const channel = bot.channels.cache.get(errorLogsChannelId);
-  if (!channel || !errorLogsChannelId) {
+  const channel = bot.channels.cache.get(bot.config.errorLogsChannelId);
+  if (!channel || !bot.config.errorLogsChannelId) {
     return console.error("UNHANDLED ERROR", error);
   }
 
@@ -211,7 +211,6 @@ function sendErrorLog(bot, error, type, msgContent) {
     .addField("Name", name, true)
     .addField("Code", code, true)
     .addField("httpStatus", httpStatus, true)
-    .addField("Timestamp", `put Dayjs here xd`, true)
     .addField("Command executed", content, true)
     .setDescription(`\`\`\`${stack}\`\`\` `)
     .setColor(type === "error" ? "RED" : "ORANGE");

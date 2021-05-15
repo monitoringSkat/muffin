@@ -1,7 +1,6 @@
-const { owners } = require("../config.json");
-
 module.exports = {
   name: "message",
+  type: "bot",
   async execute(bot, message) {
     if (message.channel.type === "dm") return;
     if (!message.channel.permissionsFor(message.guild.me).has("SEND_MESSAGES"))
@@ -55,7 +54,7 @@ module.exports = {
           }
         }
 
-        if (cmd.owner && !owners.includes(message.author.id)) {
+        if (cmd.owner && !bot.config.owners.includes(message.author.id)) {
           return;
         }
 

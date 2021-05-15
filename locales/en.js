@@ -129,6 +129,7 @@ module.exports = {
     PROVIDE_SEARCH: "Please provide a search query!",
     LIVE_NOT_SUPPORTED: "Unfortunately, playing live streams is not supported.",
     MUST_BE_IN_VC: ":warning: You must be in a voice channel to use this command.",
+    MUST_BE_IN_SAME_VC: "You must be in the same voice channel as me.",
     CHANNEL_LEFT: "I've left the voice channel due to inactivity.",
     QUEUE: "Playback queue",
     EMPTY_QUEUE: "Playback queue is currently empty.",
