@@ -1,7 +1,8 @@
 const { connect, connection } = require("mongoose");
+const { mongodbUri } = require("../config.json");
 
 (async function database() {
-  const uri = bot.config.mongodbUri;
+  const uri = mongodbUri;
 
   try {
     await connect(uri, {
