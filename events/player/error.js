@@ -13,9 +13,15 @@ module.exports = {
         case "NotPlaying": {
           return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
         }
+        case "ParseError": {
+          return message.channel.send(lang.MUSIC.FETCH_ERROR);
+        }
+        case "VideoUnavailable": {
+          return message.channel.send(lang.MUSIC.TRACK_UNAVAILABLE);
+        }
         default: {
           bot.sendErrorLog(bot, { stack: error, name: "discord-player" }, "error");
-          return message.channel.send(lang.GLOBAL.ERROR);
+          return message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${error.stack}\`\`\``);
         }
       }
     },

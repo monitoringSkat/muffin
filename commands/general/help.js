@@ -39,8 +39,8 @@ module.exports = {
         .setTitle(`\`${cmd.name}\``)
         .setDescription(description)
         .addField(lang.HELP.CATEGORY, lang.HELP[cmd.category.toUpperCase()], true)
-        .addField(lang.HELP.ALIASES, aliases, true)
         .addField(lang.HELP.COOLDOWN, cooldown, true)
+        .addField(lang.HELP.ALIASES, aliases)
         .addField(lang.HELP.USAGE, usage)
         .addField(lang.HELP.BOT_PERMS, botPerms, true)
         .addField(lang.HELP.MEMBER_PERMS, memberPerms, true);
@@ -80,13 +80,13 @@ module.exports = {
       // .addField(lang.HELP.FUN, funCmds)
       .addField(lang.HELP.MUSIC, musicCmds)
       // .addField(lang.HELP.USEFUL, usefulCmds);
-    // if (nsfw) {
-      // embed.addField(lang.HELP.NSFW, nsfwCmds);
-    // } else {
-      // embed.addField(lang.HELP.NSFW, lang.HELP.NSFW_ONLY);
-    // }
+    if (nsfw) {
+       embed.addField(lang.HELP.NSFW, nsfwCmds);
+     } else {
+       embed.addField(lang.HELP.NSFW, lang.HELP.NSFW_ONLY);
+       }
     embed
-      // .addField(lang.HELP.SETTINGS, settingsCmds)
+      .addField(lang.HELP.SETTINGS, settingsCmds)
       .setDescription(lang.HELP.HELP_DESC.replace("{prefix}", prefix))
       .setTitle(lang.HELP.HELP);
 

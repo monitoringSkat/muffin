@@ -1,4 +1,6 @@
 module.exports = {
+  NAME: "en",
+  FULL_NAME: "English",
   GLOBAL: {
     ERROR: "An unexpected error has occured.",
     NOTHING: "There is nothing here right now.",
@@ -130,7 +132,10 @@ module.exports = {
     LIVE_NOT_SUPPORTED: "Unfortunately, playing live streams is not supported.",
     MUST_BE_IN_VC: ":warning: You must be in a voice channel to use this command.",
     MUST_BE_IN_SAME_VC: "You must be in the same voice channel as me.",
-    CHANNEL_LEFT: "I've left the voice channel due to inactivity.",
+    FETCH_ERROR: "An error occurred while fetching the track, please try again.",
+    TRACK_UNAVAILABLE: "This track is currently unavailable, please try again later.",
+    CHANNEL_LEFT: "Destroyed the player and left the voice channel.",
+    INACTIVE_CHANNEL_LEFT: "Destroyed the player and left the voice channel due to inactivity.",
     QUEUE: "Playback queue",
     EMPTY_QUEUE: "Playback queue is currently empty.",
     ADDED_TO_QUEUE: "Added to queue",
@@ -144,7 +149,10 @@ module.exports = {
     STOPPED: "Music playback was stopped.",
     NO_RESULTS: "No results were found for your query.",
     TRACKS: "Tracks",
-    TRACK_CANNOT_BE_SKIPPED: "This track cannot be skipped as it's last in the queue",
+    LAST_TRACK_IN_QUEUE: "This track cannot be skipped as it's last in the queue",
+    TRACK_REQUESTED_BY_SOMEONE_ELSE: "You cannot skip a track that someone else has requested.",
+    VOLUME_VALUE_LIMIT: "The volume value cannot be less than 0 and cannot exceed 200.",
+    VOLUME_UPDATED: "Player volume is now {newVol}%."
   },
   OTHER: {
     REQUESTED_BY: "Requested by",

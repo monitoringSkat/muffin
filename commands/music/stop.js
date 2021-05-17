@@ -17,12 +17,8 @@ module.exports = {
         return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
       }
   
-      if (!queue) {
-        return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
-      }
-  
       bot.player.stop(message);
-      message.channel.send(lang.MUSIC.STOPPED);
+      message.channel.send(lang.MUSIC.CHANNEL_LEFT);
     },
   };
   

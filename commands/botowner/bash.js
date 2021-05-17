@@ -11,15 +11,9 @@ module.exports = {
       return message.channel.send(bot.lang.GLOBAL.PROVIDE_ARGS);
     }
 
-    const msg = await message.channel.send(lang.OTHER.PROCESSING);
-    let result = await require('child_process')
-    .execSync(args.join(' ')
-    .toString('utf8') + ' ');
-
-    if (result.length > 2000) {
-      console.log(result);
-      result = "Output exceeds 2000 symbols, check your console.";
-      msg.edit(result);
-    } else msg.edit(result);
-  },
+    message.channel.send(lang.OTHER.PROCESSING)
+    .then(msg => msg.edit(require('child_process')
+      .execSync(args.join(' '))
+      .toString('utf8')));
+  }
 };

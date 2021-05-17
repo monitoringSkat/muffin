@@ -6,7 +6,7 @@ module.exports = {
   botPermissions: ["EMBED_LINKS"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
-    // const botVoice = await bot.voiceConnections.get(message.guild.id).channel.id;
+    // const botVoice = await bot.voice.connections.get(message.guild.id).channel.id;
     const userVoice = message.member.voice.channel;
     const search = args.join(" ");
 
@@ -22,6 +22,7 @@ module.exports = {
       await bot.player.play(message, search, true);
     } catch (e) {
       console.error(e?.stack || e);
+      message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e?.stack || e}\`\`\``);
     }
   },
 };
