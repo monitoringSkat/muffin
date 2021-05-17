@@ -5,6 +5,7 @@ const { Player } = require("discord-player");
 const { functions } = require("./utils/functions");
 const bot = new Client({
   disableMentions: "all",
+  restRequestTimeout: 30000,
   partials: [
     "GUILD_MEMBER",
     "MESSAGE",

@@ -11,7 +11,7 @@ module.exports = {
     const avatar = bot.user.displayAvatarURL({ dynamic: true });
 
     const embed = bot.buildEmbed(message)
-      .setAuthor(`${bot.user.username} v${bot.package.version}`, avatar, `https://github.com/Tegnio/muffin/releases/tag/v${bot.package.version}`)
+      .setAuthor(`${bot.user.username} v${bot.package.version}`, avatar, `${bot.package.repository.url}/releases/tag/v${bot.package.version}`)
       .addField(lang.BOT.GENERAL_INFO,
         `
         **${lang.BOT.PLATFORM}**: ${os.type} (${os.arch})
