@@ -4,7 +4,6 @@ module.exports = {
   name: "boobs",
   category: "nsfw",
   cooldown: 5,
-  nsfw: true,
   botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
   async execute(bot, message) {
     const lang = await bot.getGuildLang(message.guild.id);
