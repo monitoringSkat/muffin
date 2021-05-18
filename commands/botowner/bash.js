@@ -1,7 +1,6 @@
 module.exports = {
   name: "bash",
   category: "botowner",
-  owner: true,
   aliases: ["sh"],
   botPermissions: ["EMBED_LINKS"],
   async execute(bot, message, args) {
