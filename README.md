@@ -1,4 +1,4 @@
-<img align="right" src="./assets/avatar.png" height="160" width="160">
+<img align="right" src="./assets/avatar.png" height="200" width="200">
 
 # Muffin
 ### Yet another Discord bot. Still in development though.
