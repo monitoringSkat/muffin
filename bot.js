@@ -33,12 +33,11 @@ bot.player = new Player(bot, {
   leaveOnEmptyCooldown: 300000,
   leaveOnStop: true,
   enableLive: true,
-  fetchBeforeQueued: true
 });
 
 global.Promise = require("bluebird");
 Promise.config({
-  longStackTraces: true,
+  longStackTraces: true
 });
 
 require("./handlers/CommandHandler")(bot);
