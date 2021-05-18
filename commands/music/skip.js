@@ -29,9 +29,14 @@ module.exports = {
       if (queue.tracks.length === 1) {
         return message.channel.send(lang.MUSIC.LAST_TRACK_IN_QUEUE);
       }
-  
-      message.channel.send(lang.MUSIC.SKIPPING.replace("{track}", track.title));
-      bot.player.skip(message);
+      
+      try {
+        message.channel.send(lang.MUSIC.SKIPPING.replace("{track}", track.title));
+        bot.player.skip(message);
+      } catch (e) {
+        bot.sendErrorLog(bot, error, e?.type, e?.stack)
+        message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
+      }
     },
   };
   
