@@ -22,6 +22,12 @@ module.exports = {
         **${lang.BOT.COMMANDS}**: ${bot.commands.filter((cmd) => cmd.category !== "botowner").size}
         **${lang.BOT.VOICE_CONNECTIONS}**: ${bot.formatNumber(bot.voice.connections.size)}
         `, true)
+        .addField(lang.BOT.USEFUL_LINKS,
+          `
+          [${lang.BOT.SUPPORT_SERVER}](${bot.config.serverUri})
+          [${lang.BOT.ADD}](https://discord.com/oauth2/authorize?client_id=${bot.user.id}&permissions=${bot.config.permissionsInteger}&scope=bot%20applications.commands)
+          [${lang.BOT.SOURCE_CODE}](${bot.package.repository.url})
+          `)
         
     message.channel.send(embed);
   },
