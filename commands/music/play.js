@@ -22,7 +22,7 @@ module.exports = {
       await bot.player.play(message, search, true);
     } catch (e) {
       console.error(e?.stack || e);
-      message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e?.stack || e}\`\`\``);
+      message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
     }
   },
 };
