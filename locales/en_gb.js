@@ -22,10 +22,10 @@ module.exports = {
     VOICE_CONNECTIONS: "Voice connections",
     USEFUL_LINKS: "Useful links",
     SUPPORT_SERVER: "Support server",
-    ADD: "Click here to add me",
+    ADD: "Add to your server",
     SOURCE_CODE: "Source code",
     NEED_PERMS: "I need more permissions to execute this command: {neededPermissions}",
-    LOCALE_UPDATED: "Successfully updated locale to **{locale}**!",
+    LOCALE_UPDATED: "Successfully updated locale to **`{locale}`**!",
     PREFIX_UPDATED: "Successfully updated prefix to **`{prefix}`**!"
   },
   MEMBER: {

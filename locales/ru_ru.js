@@ -22,10 +22,10 @@ module.exports = {
     VOICE_CONNECTIONS: "Голосовых подключений",
     USEFUL_LINKS: "Полезные ссылки",
     SUPPORT_SERVER: "Сервер поддержки",
-    ADD: "Добавить к себе",
+    ADD: "Добавить на свой сервер",
     SOURCE_CODE: "Исходный код",
     NEED_PERMS: "Мне необходимо больше прав для выполнения команды: {neededPermissions}",
-    LOCALE_UPDATED: "Локаль успешно обновлена на **{locale}**!",
+    LOCALE_UPDATED: "Локаль успешно обновлена на **`{locale}`**!",
     PREFIX_UPDATED: "Префикс успешно обновлен на **`{prefix}`**!"
   },
   MEMBER: {
