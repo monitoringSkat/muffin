@@ -30,7 +30,6 @@ module.exports = {
   },
   MEMBER: {
     COOLDOWN: "Please wait **{cooldown}** more seconds before using the `{cmd}` command again.",
-    BLACKLISTED: "You've been blacklisted from using this bot.",
     NO_PERMS: "Sorry, you don't have the correct permissions for this command.",
     NEED_PERMS: "You need more permissions to execute this command: {neededPermissions}",
   },
