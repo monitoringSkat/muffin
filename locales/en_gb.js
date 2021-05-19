@@ -8,7 +8,6 @@ module.exports = {
     NONE: "None",
     NOT_SPECIFIED: "Not specified",
     NOT_AVAILABLE: "Not available",
-    SERVER_PREFIX: "Server prefix",
     PROVIDE_ARGS: "Please provide some arguments!",
     LONG_ARGS: "The arguments provided are too long! ({length} > {limit})",
   },
@@ -25,11 +24,9 @@ module.exports = {
     SUPPORT_SERVER: "Support server",
     ADD: "Click here to add me",
     SOURCE_CODE: "Source code",
-    USED_APIS: "Used APIs",
-    VOTE: "Vote for me",
-    ACKNOWLEDGMENTS: "Acknowlegdements",
-    NO_PERMS: "It seems to me that I don't have some permissions in order to work properly.\nPlease kick & re-invite me using this link:\n{link}",
     NEED_PERMS: "I need more permissions to execute this command: {neededPermissions}",
+    LOCALE_UPDATED: "Successfully updated locale to **{locale}**!",
+    PREFIX_UPDATED: "Successfully updated prefix to **`{prefix}`**!"
   },
   MEMBER: {
     COOLDOWN: "Please wait **{cooldown}** more seconds before using the `{cmd}` command again.",
@@ -43,12 +40,6 @@ module.exports = {
   },
   IMAGE: {
     FAILED_TO_LOAD: "Click here if the image failed to load.",
-  },
-  LANG: {
-    PROVIDE_LANG: "Please provide a language!",
-    NOT_AVAILABLE: "This language is not available. Available languages:",
-    LIST: "Available languages:",
-    UPDATED: "Successfully updated language to **{language}**!",
   },
   TIME: {
     DAYS: "days",
@@ -155,10 +146,7 @@ module.exports = {
   },
   OTHER: {
     REQUESTED_BY: "Requested by",
-    GOOGLE_SEARCH: "Google Search",
-    PREFIX_UPDATE: "Use `{cmd}` to set a new prefix",
     PROCESSING: "Your request is processing, please wait...",
-    EVAL: "Eval",
     GH_NOT_FOUND: "No GitHub accounts were found for your query.",
     GH_FOLLOWING: "Following",
     GH_FOLLOWERS: "Followers",
@@ -171,6 +159,9 @@ module.exports = {
     CMD_DISABLED: "The **{command}** command was disabled on this server.",
     CALC: "Calculator",
     CALC_ERR: "An error has occurred while performing the calculations.",
+    PROVIDE_LOCALE: "Please provide a locale!",
+    LOCALE_NOT_AVAILABLE: "This locale is not available. Available locales:",
+    LOCALES_LIST: "Available locales:",
     MUST_BE_A_NUMBER: "There must be a number instead of **{args}**!",
     MUST_BE_A_NATURAL_NUMBER: "A natural number was expected instead of **{args}**.",
     MUST_BE_AN_INTEGER: "Maybe you should type an integer rather than **{args}**?",
