@@ -35,7 +35,8 @@ module.exports = {
     const command = args.shift().toLowerCase();
 
     if (message.mentions.has(bot.user.id) && !command) {
-      message.channel.send(`${lang.GLOBAL.SERVER_PREFIX}: \`${serverPrefix}\``);
+      message.channel.send(lang.HELP.HELP_DESC
+        .replace("{prefix}", serverPrefix));
     }
 
     try {
