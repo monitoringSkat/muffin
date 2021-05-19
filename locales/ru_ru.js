@@ -1,6 +1,7 @@
 module.exports = {
-  NAME: "ru",
-  FULL_NAME: "Русский",
+  CODE: "ru_ru",
+  NAME: "Русский",
+  REGION: "Россия",
   GLOBAL: {
     ERROR: "Произошла непредвиденная ошибка.",
     NOTHING: "Здесь пока что ничего нет.",
@@ -12,9 +13,7 @@ module.exports = {
     LONG_ARGS: "Предоставленные аргументы слишком длинны! ({length} > {limit})",
   },
   BOT: {
-    ABOUT: "О smiley",
     GENERAL_INFO: "Основная информация",
-    DEVELOPER: "Разработчик",
     PLATFORM: "Платформа",
     LATENCY: "Задержка",
     SHARDS: "Шардов",

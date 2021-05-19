@@ -1,6 +1,7 @@
 module.exports = {
-  NAME: "en",
-  FULL_NAME: "English",
+  CODE: "en_gb",
+  NAME: "English",
+  REGION: "Great Britain",
   GLOBAL: {
     ERROR: "An unexpected error has occured.",
     NOTHING: "There is nothing here right now.",
@@ -12,9 +13,7 @@ module.exports = {
     LONG_ARGS: "The arguments provided are too long! ({length} > {limit})",
   },
   BOT: {
-    ABOUT: "About smiley",
     GENERAL_INFO: "General information",
-    DEVELOPER: "Developer",
     PLATFORM: "Platform",
     LATENCY: "Latency",
     SHARDS: "Shards",
