@@ -27,9 +27,14 @@ module.exports = {
         .map((l) => `\`${l}\``)
         .join(", ")}`);
     }
-    
-  bot.updateGuildById(message.guild.id, { "locale": locale });
-  message.channel.send(lang.LANG.UPDATED
-    .replace("{language}", locale));
+  
+  try {
+    bot.updateGuildById(message.guild.id, { "locale": locale });
+    message.channel.send(lang.LANG.UPDATED
+      .replace("{language}", locale));
+  } catch (e) {
+      bot.sendErrorLog(bot, error, e?.type, e?.stack)
+      message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
+    }
   }
 }

@@ -16,9 +16,14 @@ module.exports = {
       if (!bot.player.isPlaying(message)) {
         return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
       }
-  
-      bot.player.stop(message);
-      message.channel.send(lang.MUSIC.CHANNEL_LEFT);
+      
+      try {
+        bot.player.stop(message);
+        message.channel.send(lang.MUSIC.CHANNEL_LEFT);
+      } catch (e) {
+        bot.sendErrorLog(bot, error, e?.type, e?.stack)
+        message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
+      }
     },
   };
   

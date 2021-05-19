@@ -1,10 +1,14 @@
 {
   "name": "muffin",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Yet another Discord bot.",
   "main": "./bot.js",
   "engines": {
     "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tegnio/muffin"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,6 +20,7 @@
   "dependencies": {
     "@discord-player/extractor": "^3.0.0",
     "@discordjs/opus": "^0.5.0",
+    "bluebird": "^3.5.1",
     "bufferutil": "^4.0.3",
     "dayjs": "^1.10.4",
     "discord-logs": "^1.9.0",
@@ -23,7 +28,7 @@
     "discord-starboards": "^2.2.3",
     "discord-temp-channels": "^2.0.0",
     "discord.js": "^12.5.3",
-    "ffmpeg": "^0.0.4",
+    "ffmpeg-static": "^4.3.0",
     "glob": "^7.1.7",
     "mongoose": "^5.12.9",
     "node-fetch": "^2.6.1",

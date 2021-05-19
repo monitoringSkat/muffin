@@ -21,8 +21,8 @@ module.exports = {
     try {
       await bot.player.play(message, search, true);
     } catch (e) {
-      console.error(e?.stack || e);
-      message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e?.stack || e}\`\`\``);
+      bot.sendErrorLog(bot, error, e?.type, e?.stack)
+      message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
     }
   },
 };

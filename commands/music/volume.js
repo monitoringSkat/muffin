@@ -29,8 +29,13 @@ module.exports = {
       return message.channel.send(lang.MUSIC.VOLUME_VALUE_LIMIT);
     }
 
-    bot.player.setVolume(message, newVol);
-    message.channel.send(lang.MUSIC.VOLUME_UPDATED
+    try {
+      bot.player.setVolume(message, newVol);
+      message.channel.send(lang.MUSIC.VOLUME_UPDATED
         .replace("{newVol}", newVol));
+    } catch (e) {
+      bot.sendErrorLog(bot, error, e?.type, e?.stack)
+      message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
+    }
   },
 };
