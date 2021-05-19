@@ -174,7 +174,7 @@ async function getGuildLang(guildId) {
   try {
     const guild = await getGuildById(guildId);
 
-    return require(`../locales/${guild?.locale || "en"}`);
+    return require(`../locales/${guild?.locale || "en_gb"}`);
   } catch (e) {
     console.error(e);
   }
