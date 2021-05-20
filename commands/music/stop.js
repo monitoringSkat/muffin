@@ -13,7 +13,7 @@ module.exports = {
         return message.channel.send(lang.MUSIC.MUST_BE_IN_VC);
       }
   
-      if (!bot.player.isPlaying(message)) {
+      if (  !queue) {
         return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
       }
       
@@ -21,7 +21,7 @@ module.exports = {
         bot.player.stop(message);
         message.channel.send(lang.MUSIC.CHANNEL_LEFT);
       } catch (e) {
-        bot.sendErrorLog(bot, error, e?.type, e?.stack)
+        bot.sendErrorLog(bot, "error", e?.type, e?.stack)
         message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
       }
     },

@@ -21,7 +21,7 @@ module.exports = {
     try {
       await bot.player.play(message, search, true);
     } catch (e) {
-      bot.sendErrorLog(bot, error, e?.type, e?.stack)
+      bot.sendErrorLog(bot, "error", e?.type, e?.stack)
       message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
     }
   },
