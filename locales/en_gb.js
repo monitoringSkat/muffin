@@ -33,6 +33,9 @@ module.exports = {
     COOLDOWN: "Please wait **{cooldown}** more seconds before using the `{cmd}` command again.",
     NO_PERMS: "Sorry, you don't have the correct permissions for this command.",
     NEED_PERMS: "You need more permissions to execute this command: {neededPermissions}",
+    STATUS: "Status",
+    CUSTOM_STATUS: "Custom status",
+    ID: "User ID"
   },
   GUILD: {
     NOT_FOUND: "Guild not found.",
@@ -127,7 +130,7 @@ module.exports = {
     INACTIVE_CHANNEL_LEFT: "Destroyed the player and left the voice channel due to inactivity.",
     QUEUE: "Playback queue",
     EMPTY_QUEUE: "Playback queue is currently empty.",
-    ADDED_TO_QUEUE: "Added to queue",
+    QUEUED: "Queued",
     QUEUE_ENDED: "Playback queue has ended. Leaving the voice channel.",
     STARTED_PLAYING: "Started playing",
     SKIPPING: "Skipping **{track}**...",
