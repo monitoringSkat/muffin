@@ -15,6 +15,7 @@ module.exports = {
         }
         case "ParseError": {
           return message.channel.send(lang.MUSIC.FETCH_ERROR);
+          bot.player.skip(message);
         }
         case "VideoUnavailable": {
           return message.channel.send(lang.MUSIC.TRACK_UNAVAILABLE);
