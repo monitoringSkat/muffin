@@ -1,5 +1,6 @@
 module.exports = {
     name: "error",
+    type: "player",
     async execute(bot, error, message) {
       const lang = await bot.getGuildLang(message.guild.id);
   
