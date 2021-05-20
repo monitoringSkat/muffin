@@ -16,7 +16,7 @@
     "normal": "node ."
   },
   "author": "Tegnio",
-  "license": "GPL-3.0-only",
+  "license": "GPL-3.0",
   "dependencies": {
     "@discord-player/extractor": "^3.0.0",
     "@discordjs/opus": "^0.5.0",
