@@ -22,7 +22,7 @@ module.exports = {
         message.channel.send(lang.BOT.PREFIX_UPDATED
             .replace("{prefix}", prefix));
     } catch (e) {
-        bot.sendErrorLog(bot, "error", e?.type, e?.stack)
+        bot.sendErrorLog(bot, e, e?.type, e?.stack)
         message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
     }  
   },
