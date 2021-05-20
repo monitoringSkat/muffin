@@ -33,7 +33,7 @@ module.exports = {
     message.channel.send(lang.BOT.LOCALE_UPDATED
       .replace("{locale}", locale));
   } catch (e) {
-      bot.sendErrorLog(bot, error, e?.type, e?.stack)
+      bot.sendErrorLog(bot, "error", e?.type, e?.stack)
       message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
     }
   }
