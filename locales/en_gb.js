@@ -29,6 +29,7 @@ module.exports = {
     PREFIX_UPDATED: "Successfully updated prefix to **`{prefix}`**!"
   },
   MEMBER: {
+    AVATAR: "{username}'s avatar",
     COOLDOWN: "Please wait **{cooldown}** more seconds before using the `{cmd}` command again.",
     NO_PERMS: "Sorry, you don't have the correct permissions for this command.",
     NEED_PERMS: "You need more permissions to execute this command: {neededPermissions}",
