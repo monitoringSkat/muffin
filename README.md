@@ -20,6 +20,8 @@ If you know how to fix it, then feel free to create a Pull Request.
 <br>
 I'll be glad to any help! Stars are also appeciated!</h4>
 
+# Need help?
+#### If you don't understand something or you are experiencing problems, please don't hesitate to join our [Discord server](https://discord.gg/zgdffUdxSj).
 
 # License
 #### This project uses GNU GPLv3. See the [LICENSE](./LICENSE) file for details.
