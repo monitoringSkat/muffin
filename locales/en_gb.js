@@ -34,8 +34,16 @@ module.exports = {
     NO_PERMS: "Sorry, you don't have the correct permissions for this command.",
     NEED_PERMS: "You need more permissions to execute this command: {neededPermissions}",
     STATUS: "Status",
+    STATUSES: {
+      ONLINE: "Online",
+      IDLE: "Idle",
+      DND: "Do Not Disturb",
+      OFFLINE: "Offline"
+    },
+    ID: "User ID",
+    CREATION_DATE: "Creation date",
     CUSTOM_STATUS: "Custom status",
-    ID: "User ID"
+    ROLES: "Roles"
   },
   GUILD: {
     NOT_FOUND: "Guild not found.",
