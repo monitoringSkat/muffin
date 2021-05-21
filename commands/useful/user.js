@@ -7,7 +7,6 @@ module.exports = {
     async execute(bot, message, args) {
         const lang = await bot.getGuildLang(message.guild.id);
         let member = await bot.findMember(message, args, true);
-        if (!member) member = message.author;    
 
         const nickname = member.nickname;
         let title = `${nickname} (${member.user.tag})`;
@@ -20,7 +19,7 @@ module.exports = {
             .filter((r) => r.id !== message.guild.id)
             .sort((a, b) => b.rawPosition - a.rawPosition)
             .map((r) => r)
-            .join(", ") || "None";
+            .join(", ") || lang.GLOBAL.NONE;
         const roleCount = member.roles.cache.filter((r) => r.id !== message.guild.id).size;
         
         const embed = bot.buildEmbed(message)
