@@ -1,5 +1,6 @@
 module.exports = {
     name: "error",
+    type: "player",
     async execute(bot, error, message) {
       const lang = await bot.getGuildLang(message.guild.id);
   
@@ -15,6 +16,7 @@ module.exports = {
         }
         case "ParseError": {
           return message.channel.send(lang.MUSIC.FETCH_ERROR);
+          bot.player.skip(message);
         }
         case "VideoUnavailable": {
           return message.channel.send(lang.MUSIC.TRACK_UNAVAILABLE);

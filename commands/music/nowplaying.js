@@ -29,7 +29,7 @@ module.exports = {
         .setThumbnail(track.thumbnail)
         .addField(lang.OTHER.REQUESTED_BY, track.requestedBy.tag, true)
         .addField(lang.MUSIC.UPLOADED_BY, track.author, true)
-        .addField(lang.MUSIC.VOLUME, `${volume} %`, true)
+        .addField(lang.MUSIC.VOLUME, `${volume}%`, true)
         .addField(lang.MUSIC.PLAYBACK_PROGESS, progressBar);
 
     message.channel.send(embed);

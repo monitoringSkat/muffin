@@ -34,7 +34,7 @@ module.exports = {
       message.channel.send(lang.MUSIC.VOLUME_UPDATED
         .replace("{newVol}", newVol));
     } catch (e) {
-      bot.sendErrorLog(bot, error, e?.type, e?.stack)
+      bot.sendErrorLog(bot, e, e?.type, e?.stack)
       message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
     }
   },

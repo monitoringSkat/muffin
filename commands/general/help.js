@@ -79,7 +79,7 @@ module.exports = {
       .addField(lang.HELP.GENERAL, generalCmds)
       // .addField(lang.HELP.FUN, funCmds)
       .addField(lang.HELP.MUSIC, musicCmds)
-      // .addField(lang.HELP.USEFUL, usefulCmds);
+      .addField(lang.HELP.USEFUL, usefulCmds);
     if (nsfw) {
        embed.addField(lang.HELP.NSFW, nsfwCmds);
      } else {

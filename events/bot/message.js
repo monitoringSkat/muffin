@@ -11,10 +11,12 @@ module.exports = {
     const userId = message.author.id;
     const cooldowns = bot.cooldowns;
     const guild = await bot.getGuildById(guildId);
+    const user = await bot.getUserById(userId, guildId);
     const mentions = message.mentions.members;
     const disabledCommands = guild?.disabled_commands;
     const lang = await bot.getGuildLang(guildId);
     const ignoredChannels = guild?.ignored_channels;
+
     if (ignoredChannels.includes(message.channel.id)) return;
 
     const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -35,7 +37,8 @@ module.exports = {
     const command = args.shift().toLowerCase();
 
     if (message.mentions.has(bot.user.id) && !command) {
-      message.channel.send(`${lang.GLOBAL.SERVER_PREFIX}: \`${serverPrefix}\``);
+      message.channel.send(lang.HELP.HELP_DESC
+        .replace("{prefix}", serverPrefix));
     }
 
     try {
