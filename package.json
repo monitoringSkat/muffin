@@ -1,6 +1,6 @@
 {
   "name": "muffin",
-  "version": "0.5.0-rc",
+  "version": "0.5.0",
   "description": "Yet another Discord bot.",
   "main": "./bot.js",
   "engines": {
