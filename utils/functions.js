@@ -222,7 +222,7 @@ function sendErrorLog(bot, error, type, msgContent) {
  * @param {number | string} date
  * @returns {string}
  */
-const formatDate = () => dayjs().format("DD.MM.YYYY, HH:mm:ss");
+const formatDate = (date) => dayjs(date).format("DD.MM.YYYY, HH:mm:ss");
 
 /**
  * @param {string} str
