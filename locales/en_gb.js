@@ -26,7 +26,7 @@ module.exports = {
     SOURCE_CODE: "Source code",
     NEED_PERMS: "I need more permissions to execute this command: {neededPermissions}",
     LOCALE_UPDATED: "Successfully updated locale to **`{locale}`**!",
-    PREFIX_UPDATED: "Successfully updated prefix to **`{prefix}`**!"
+    PREFIX_UPDATED: "Successfully updated prefix to **`{prefix}`**"
   },
   MEMBER: {
     AVATAR: "{username}'s avatar",

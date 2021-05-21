@@ -26,7 +26,7 @@ module.exports = {
     SOURCE_CODE: "Исходный код",
     NEED_PERMS: "Мне необходимо больше прав для выполнения команды: {neededPermissions}",
     LOCALE_UPDATED: "Локаль успешно обновлена на **`{locale}`**!",
-    PREFIX_UPDATED: "Префикс успешно обновлен на **`{prefix}`**!"
+    PREFIX_UPDATED: "Префикс успешно обновлен на **`{prefix}`**"
   },
   MEMBER: {
     AVATAR: "Аватар {username}",
