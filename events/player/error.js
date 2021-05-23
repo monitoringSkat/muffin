@@ -20,6 +20,7 @@ module.exports = {
         }
         case "VideoUnavailable": {
           return message.channel.send(lang.MUSIC.TRACK_UNAVAILABLE);
+          bot.player.skip(message);
         }
         default: {
           bot.sendErrorLog(bot, { stack: error, name: "discord-player" }, "error");
