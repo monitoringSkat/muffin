@@ -24,7 +24,7 @@ module.exports = {
         }
         default: {
           bot.sendErrorLog(bot, { stack: error, name: "discord-player" }, "error");
-          return message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${error.stack}\`\`\``);
+          return message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${error?.stack || e}\`\`\``);
         }
       }
     },
