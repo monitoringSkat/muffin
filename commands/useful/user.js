@@ -9,7 +9,7 @@ module.exports = {
         let member = await bot.findMember(message, args, true);
 
         const nickname = member.nickname;
-        let title = `${nickname} (${member.user.tag})`;
+        let title = `**\`${nickname}\`** | **\`${member.user.tag}\`**`;
         if (!nickname) title = member.user.tag;
 
         const status = lang.MEMBER.STATUSES[member.user.presence.status.toUpperCase()];
