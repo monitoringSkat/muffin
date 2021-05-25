@@ -152,7 +152,8 @@ module.exports = {
     LAST_TRACK_IN_QUEUE: "This track cannot be skipped as it's last in the queue",
     TRACK_REQUESTED_BY_SOMEONE_ELSE: "You cannot skip a track that someone else has requested.",
     VOLUME_VALUE_LIMIT: "The volume value cannot be less than 0 and cannot exceed 200.",
-    VOLUME_UPDATED: "Player volume is now {newVol}%."
+    VOLUME_UPDATED: "Player volume is now {newVol}%.",
+    CURRENT_VOLUME: "Current player volume is {vol}%."
   },
   OTHER: {
     REQUESTED_BY: "Requested by",

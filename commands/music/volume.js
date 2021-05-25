@@ -16,9 +16,10 @@ module.exports = {
       return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
     }
 
-    if (!newVol) {
-      return message.channel.send(lang.GLOBAL.PROVIDE_ARGS);
-    }
+    if (!newVol && queue) {
+      return message.channel.send(lang.MUSIC.CURRENT_VOLUME
+        .replace("{vol}", bot.player.queues.get(message.guild.id).volume));
+    } else return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
 
     if (isNaN(newVol)) {
       return message.channel.send(lang.OTHER.MUST_BE_A_NUMBER
