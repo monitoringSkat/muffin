@@ -35,9 +35,7 @@ bot.player = new Player(bot, {
   leaveOnStop: true,
   enableLive: true,
 });
-bot.starboards = new StarboardsManager(bot, {
-  storage: false,
-});
+bot.starboards = new StarboardsManager(bot, {});
 
 global.Promise = require("bluebird");
 Promise.config({
