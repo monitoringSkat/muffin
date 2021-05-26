@@ -13,8 +13,8 @@ class MuffinStarboards extends StarboardsManager {
     return true;
   }
 
-  async deleteStarboard(channelID, emoji) {
-    await StarboardModel.findOneAndDelete({ channelID, emoji });
+  async deleteStarboard(channel_id, emoji) {
+    await StarboardModel.findOneAndDelete({ channel_id, emoji });
 
     return true;
   }
