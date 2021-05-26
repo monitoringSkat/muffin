@@ -271,6 +271,28 @@ function buildEmbed(message) {
     });
 }
 
+
+/**
+ *
+ * @param {import("discord.js").Client} bot
+ * @param {import("discord.js").Channel} channel
+ * @param {Object} options
+ * @param {String} deleteOld
+ */
+async function createStarboard(bot, channel, options, deleteOld) {
+  if (deleteOld) {
+    bot.starboardsManager.delete(deleteOld);
+  }
+
+  await bot.starboardsManager.create(channel, {
+    ...options,
+    selfStar: true,
+    starEmbed: true,
+    attachments: true,
+    resolveImageUrl: true,
+  });
+}
+
 module.exports = {
   functions: [
   sendErrorLog,
@@ -289,6 +311,7 @@ module.exports = {
   formatNumber,
   buildEmbed,
   escapeMarkdown,
+  createStarboard,
   getGuildLang
   ]
 };
