@@ -1,7 +1,7 @@
 <img align="right" src="./assets/avatar.png" height="200" width="200">
 
 # Muffin
-### Yet another Discord bot. Still in development though.
+### A feature-rich, open-source bot for Discord servers. Still in development though.
 
 [![Discord server badge](https://img.shields.io/discord/844175881593552967?color=%237289DA)](https://discord.gg/zgdffUdxSj)
 [![Latest release badge](https://img.shields.io/github/v/release/Tegnio/muffin)](https://github.com/Tegnio/muffin/releases)
