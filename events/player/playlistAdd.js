@@ -10,7 +10,6 @@ module.exports = {
     .setURL(playlist.url)
     .setThumbnail(playlist.thumbnail)
     .addField(lang.OTHER.REQUESTED_BY, playlist.requestedBy.tag, true)
-    .addField(lang.MUSIC.UPLOADED_BY, playlist.author, true)
     .addField(lang.MUSIC.TRACKS, playlist.tracks.length, true);
 
     return message.reply(embed);
