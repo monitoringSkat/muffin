@@ -17,7 +17,7 @@
 #### While self-hosting Muffin you may not upload any copy of it to bot lists such as top.gg, you can only host a copy of Muffin as a private bot for your server.
 
 # Docs
-#### Docs are currently in development and you can check them out [here](https://github.com/Tegnio/muffin/tree/main/docs)
+#### Docs are currently in development and you can check them out [here](./docs).
 
 # Contributing
 <h4>This bot may have flaws and bugs, if you find one, then don't hesitate to open an issue.
