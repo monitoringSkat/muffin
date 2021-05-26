@@ -1,7 +1,7 @@
 const User = require("../models/User.model");
 const Guild = require("../models/Guild.model");
 const dayjs = require("dayjs");
-const { Message, MessageEmbed, Client } = require("discord.js");
+const { Message, MessageEmbed, Client, Util } = require("discord.js");
 const { embedColor } = require("../config.json");
 const fs = require("fs");
 
@@ -256,6 +256,21 @@ function buildEmbed(message) {
     .setTimestamp();
 }
 
+/**
+ * @param {string} str
+ * @returns {string}
+ */
+ function escapeMarkdown(string) {
+  if(!string) throw new Error("no string provided! (bot.escapeMarkdown}")
+  else return Util.escapeMarkdown(string, {
+      codeBlock: true,
+       spoiler: true,
+       inlineCode: true,
+       inlineCodeContent: true,
+       codeBlockContent: true,
+    });
+}
+
 module.exports = {
   functions: [
   sendErrorLog,
@@ -273,6 +288,7 @@ module.exports = {
   getLanguages,
   formatNumber,
   buildEmbed,
+  escapeMarkdown,
   getGuildLang
   ]
 };
