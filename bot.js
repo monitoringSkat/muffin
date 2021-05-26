@@ -1,3 +1,4 @@
+require("./utils/startupCheck")();
 require("./utils/database");
 const { Collection, Client, Constants } = require("discord.js");
 const config = require("./config.json");
