@@ -2,7 +2,7 @@ require("./utils/database");
 const { Collection, Client, Constants } = require("discord.js");
 const config = require("./config.json");
 const { Player } = require("discord-player");
-const StarboardsManager = require("discord-starboards");
+const MuffinStarboards = require("./classes/MuffinStarboards");
 const { functions } = require("./utils/functions");
 const bot = new Client({
   disableMentions: "all",
@@ -35,7 +35,7 @@ bot.player = new Player(bot, {
   leaveOnStop: true,
   enableLive: true,
 });
-bot.starboards = new StarboardsManager(bot, {
+bot.starboards = new MuffinStarboards(bot, {
   storage: false
 });
 
