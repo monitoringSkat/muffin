@@ -153,7 +153,8 @@ module.exports = {
     TRACK_REQUESTED_BY_SOMEONE_ELSE: "You cannot skip a track that someone else has requested.",
     VOLUME_VALUE_LIMIT: "The volume value cannot be less than 0 and cannot exceed 200.",
     VOLUME_UPDATED: "Player volume is now {newVol}%.",
-    CURRENT_VOLUME: "Current player volume is {vol}%."
+    CURRENT_VOLUME: "Current player volume is {vol}%.",
+    TRACK_STILL_STARTING: "Current track is still loading, please wait..."
   },
   OTHER: {
     REQUESTED_BY: "Requested by",

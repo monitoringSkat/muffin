@@ -153,7 +153,8 @@ module.exports = {
     TRACK_REQUESTED_BY_SOMEONE_ELSE: "Вы не можете пропустить трек, который запросил кто-то другой.",
     VOLUME_VALUE_LIMIT: "Значение громкости должно не быть меньше 0 и не превышать 200.",
     VOLUME_UPDATED: "Громкость плеера теперь {newVol}%.",
-    CURRENT_VOLUME: "Текущая громкость плеера - {vol}%."
+    CURRENT_VOLUME: "Текущая громкость плеера - {vol}%.",
+    TRACK_STILL_STARTING: "Текущий трек еще загружается, пожалуйста, подождите..."
   },
   OTHER: {
     REQUESTED_BY: "Запросил",
