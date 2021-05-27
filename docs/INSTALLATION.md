@@ -8,10 +8,12 @@
 - [MongoDB URI](https://www.mongodb.com/)
 
 # Installation process
-1. Clone the repo: `git clone https://github.com/Tegnio/muffin`
-2. Open your terminal and run `install.sh` file
-3. Create a bot at [Discord Developers Portal](https://discord.com/developers/applications) and grab the token
-4. Modify `config.json` where needed
-5. Run `npm run normal`
+1. [Download](https://github.com/Tegnio/muffin/releases) the latest release of Muffin
+2. Unarchive the file you've downloaded
+3. Navigate to the folder where you've unpacked the files
+4. Open your terminal and run `install.sh` file
+5. Create a bot at [Discord Developers Portal](https://discord.com/developers/applications) and grab the token
+6. Modify `config.json` where needed
+7. Run `npm run normal`
 
 [Return to index](README.md)
