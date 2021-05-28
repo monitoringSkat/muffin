@@ -281,10 +281,10 @@ function buildEmbed(message) {
  */
 async function createStarboard(bot, channel, options, deleteOld) {
   if (deleteOld) {
-    bot.starboardsManager.delete(deleteOld);
+    bot.starboards.delete(deleteOld);
   }
 
-  await bot.starboardsManager.create(channel, {
+  await bot.starboards.create(channel, {
     ...options,
     selfStar: true,
     starEmbed: true,
