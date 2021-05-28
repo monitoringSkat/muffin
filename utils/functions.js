@@ -216,6 +216,7 @@ function sendErrorLog(bot, error, type, msgContent) {
     .setColor(type === "error" ? "RED" : "ORANGE");
 
   channel.send(embed);
+  console.log(`[ERROR] ${stack}`)
 }
 
 /**
