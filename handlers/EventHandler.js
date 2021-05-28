@@ -1,5 +1,5 @@
 const glob = require("glob");
-const types = ["bot", "player"];
+const types = ["bot", "player", "starboards"];
 
 module.exports = function loadEvents(bot) {
   const eventFiles = glob.sync("./events/**/*.js");
@@ -24,6 +24,8 @@ module.exports = function loadEvents(bot) {
 
     if (type === "player") {
       bot.player.on(event.name, event.execute.bind(null, bot));
+    } else if (type === "starboards") {
+      bot.starboards.on(event.name, event.execute.bind(null, bot));
     } else {
       bot.on(event.name, event.execute.bind(null, bot));
     }
