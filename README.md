@@ -30,4 +30,4 @@ I'll be glad to any help! Stars are also appeciated!</h4>
 #### If you don't understand something or you are experiencing problems, please don't hesitate to join our [Discord server](https://discord.gg/zgdffUdxSj).
 
 # License
-#### This project uses GNU GPLv3. See the [LICENSE](./LICENSE) file for details.
+#### Muffin is licensed under GNU General Public License, version 3. See the [LICENSE](./LICENSE) file for details.
