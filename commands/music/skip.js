@@ -6,12 +6,16 @@ module.exports = {
     botPermissions: ["USE_EXTERNAL_EMOJIS"],
     async execute(bot, message) {
       const lang = await bot.getGuildLang(message.guild.id);
-      // const botVoice = await bot.voiceConnections.get(message.guild.id).channel.id;
       const userVoice = message.member.voice.channel;
+      const botVoice = message.guild.me.voice.channel;
       const track = bot.player.nowPlaying(message);
   
       if (!message.member.voice.channel) {
         return message.channel.send(lang.MUSIC.MUST_BE_IN_VC);
+      }
+
+      if (botVoice && userVoice && userVoice !== botVoice) {
+        return message.channel.send(lang.MUSIC.MUST_BE_IN_SAME_VC);
       }
   
       if (!bot.player.isPlaying(message)) {

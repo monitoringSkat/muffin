@@ -7,9 +7,16 @@ module.exports = {
   async execute(bot, message, args) {
     const [newVol] = args;
     const lang = await bot.getGuildLang(message.guild.id);
+    const userVoice = message.member.voice.channel;
+    const botVoice = message.guild.me.voice.channel;
     const queue = await bot.player.getQueue(message);
-    if (!message.member.voice.channel) {
+
+    if (userVoice) {
       return message.channel.send(lang.MUSIC.MUST_BE_IN_VC);
+    }
+
+    if (botVoice && userVoice && userVoice !== botVoice) {
+      return message.channel.send(lang.MUSIC.MUST_BE_IN_SAME_VC);
     }
 
     if (!bot.player.isPlaying(message) || !queue || newVol && !queue) {

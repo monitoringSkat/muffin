@@ -6,11 +6,15 @@ module.exports = {
     async execute(bot, message) {
       const lang = await bot.getGuildLang(message.guild.id);
       const queue = await bot.player.getQueue(message);
-      // const botVoice = await bot.voice.connections.get(message.guild.id).channel.id;
       const userVoice = message.member.voice.channel;
+      const botVoice = message.guild.me.voice.channel;
 
       if (!userVoice) {
         return message.channel.send(lang.MUSIC.MUST_BE_IN_VC);
+      }
+
+      if (botVoice && userVoice && userVoice !== botVoice) {
+        return message.channel.send(lang.MUSIC.MUST_BE_IN_SAME_VC);
       }
   
       if (  !queue) {

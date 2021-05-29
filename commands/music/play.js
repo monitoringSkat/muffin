@@ -6,8 +6,8 @@ module.exports = {
   botPermissions: ["EMBED_LINKS"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
-    // const botVoice = await bot.voice.connections.get(message.guild.id).channel.id;
     const userVoice = message.member.voice.channel;
+    const botVoice = message.guild.me.voice.channel;
     const search = args.join(" ");
 
     if (!search) {
@@ -16,6 +16,10 @@ module.exports = {
 
     if (!userVoice) {
       return message.channel.send(lang.MUSIC.MUST_BE_IN_VC);
+    }
+
+    if (botVoice && userVoice && userVoice !== botVoice) {
+      return message.channel.send(lang.MUSIC.MUST_BE_IN_SAME_VC);
     }
 
     try {
