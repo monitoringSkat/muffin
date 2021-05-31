@@ -7,22 +7,30 @@ module.exports = {
   async execute(bot, message, args) {
     const [newVol] = args;
     const lang = await bot.getGuildLang(message.guild.id);
+    const userVoice = message.member.voice.channel;
+    const botVoice = message.guild.me.voice.channel;
     const queue = await bot.player.getQueue(message);
-    if (!message.member.voice.channel) {
+
+    if (userVoice) {
       return message.channel.send(lang.MUSIC.MUST_BE_IN_VC);
     }
 
-    if (!bot.player.isPlaying(message) || !queue) {
+    if (botVoice && userVoice && userVoice !== botVoice) {
+      return message.channel.send(lang.MUSIC.MUST_BE_IN_SAME_VC);
+    }
+
+    if (!bot.player.isPlaying(message) || !queue || newVol && !queue) {
       return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
+    }
+
+    if (!newVol && queue) {
+      return message.channel.send(lang.MUSIC.CURRENT_VOLUME
+        .replace("{vol}", bot.player.queues.get(message.guild.id).volume));
     }
 
     if (isNaN(newVol)) {
       return message.channel.send(lang.OTHER.MUST_BE_A_NUMBER
         .replace("{args}", newVol));
-    }
-
-    if (!newVol) {
-      return message.channel.send(lang.GLOBAL.PROVIDE_ARGS);
     }
 
     if (newVol < 0 || newVol > 200) {

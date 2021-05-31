@@ -11,7 +11,7 @@ module.exports = {
       "https://nekos.life/api/v2/img/lewd"
     ).then((res) => res.json());
 
-    const embed = BaseEmbed(message)
+    const embed = bot.buildEmbed(message)
     .setImage(data.url);
 
     message.channel.send(embed);

@@ -20,10 +20,14 @@ module.exports = {
         }
         case "VideoUnavailable": {
           return message.channel.send(lang.MUSIC.TRACK_UNAVAILABLE);
+          bot.player.skip(message);
+        }
+        case "MusicStarting": {
+          return message.channel.send(lang.MUSIC.TRACK_STILL_LOADING);
         }
         default: {
           bot.sendErrorLog(bot, { stack: error, name: "discord-player" }, "error");
-          return message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${error.stack}\`\`\``);
+          return message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${error?.stack || e}\`\`\``);
         }
       }
     },

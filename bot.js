@@ -1,7 +1,9 @@
+require("./utils/startupCheck")();
 require("./utils/database");
 const { Collection, Client, Constants } = require("discord.js");
 const config = require("./config.json");
 const { Player } = require("discord-player");
+const MuffinStarboards = require("./classes/MuffinStarboards");
 const { functions } = require("./utils/functions");
 const bot = new Client({
   disableMentions: "all",
@@ -33,6 +35,12 @@ bot.player = new Player(bot, {
   leaveOnEmptyCooldown: 300000,
   leaveOnStop: true,
   enableLive: true,
+  ytdlDownloadOptions: {
+    filter: "audioonly",
+  },
+});
+bot.starboards = new MuffinStarboards(bot, {
+  storage: false
 });
 
 global.Promise = require("bluebird");

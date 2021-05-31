@@ -26,7 +26,7 @@ module.exports = {
     SOURCE_CODE: "Source code",
     NEED_PERMS: "I need more permissions to execute this command: {neededPermissions}",
     LOCALE_UPDATED: "Successfully updated locale to **`{locale}`**!",
-    PREFIX_UPDATED: "Successfully updated prefix to **`{prefix}`**!"
+    PREFIX_UPDATED: "Successfully updated prefix to **`{prefix}`**"
   },
   MEMBER: {
     AVATAR: "{username}'s avatar",
@@ -152,7 +152,9 @@ module.exports = {
     LAST_TRACK_IN_QUEUE: "This track cannot be skipped as it's last in the queue",
     TRACK_REQUESTED_BY_SOMEONE_ELSE: "You cannot skip a track that someone else has requested.",
     VOLUME_VALUE_LIMIT: "The volume value cannot be less than 0 and cannot exceed 200.",
-    VOLUME_UPDATED: "Player volume is now {newVol}%."
+    VOLUME_UPDATED: "Player volume is now {newVol}%.",
+    CURRENT_VOLUME: "Current player volume is {vol}%.",
+    TRACK_STILL_STARTING: "Current track is still loading, please wait..."
   },
   OTHER: {
     REQUESTED_BY: "Requested by",
@@ -169,7 +171,13 @@ module.exports = {
     CMD_DISABLED: "The **{command}** command was disabled on this server.",
     CALC: "Calculator",
     CALC_ERR: "An error has occurred while performing the calculations.",
+    STARBOARD_ENABLED: "Starboard was successfully enabled for {channel} channel",
+    STARBOARD_DISABLED: "Starboard was successfully disabled for {channel} channel",
+    STARBOARD_NOT_ENABLED: "This server does not have a starboard yet.",
+    STARBOARD_ALREADY_ENABLED: "This server already has a starboard!",
     PROVIDE_LOCALE: "Please provide a locale!",
+    PROVIDE_OPTION: "Please provide an option! ({options})",
+    PROVIDE_CHANNEL: "Please provide a channel!",
     LOCALE_NOT_AVAILABLE: "This locale is not available. Available locales:",
     LOCALES_LIST: "Available locales:",
     MUST_BE_A_NUMBER: "There must be a number instead of **{args}**!",

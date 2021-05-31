@@ -26,7 +26,7 @@ module.exports = {
     SOURCE_CODE: "Исходный код",
     NEED_PERMS: "Мне необходимо больше прав для выполнения команды: {neededPermissions}",
     LOCALE_UPDATED: "Локаль успешно обновлена на **`{locale}`**!",
-    PREFIX_UPDATED: "Префикс успешно обновлен на **`{prefix}`**!"
+    PREFIX_UPDATED: "Префикс успешно обновлен на **`{prefix}`**"
   },
   MEMBER: {
     AVATAR: "Аватар {username}",
@@ -152,7 +152,9 @@ module.exports = {
     LAST_TRACK_IN_QUEUE: "Невозможно пропустить данный трек, так как он последний в очереди",
     TRACK_REQUESTED_BY_SOMEONE_ELSE: "Вы не можете пропустить трек, который запросил кто-то другой.",
     VOLUME_VALUE_LIMIT: "Значение громкости должно не быть меньше 0 и не превышать 200.",
-    VOLUME_UPDATED: "Громкость плеера теперь {newVol}%."
+    VOLUME_UPDATED: "Громкость плеера теперь {newVol}%.",
+    CURRENT_VOLUME: "Текущая громкость плеера - {vol}%.",
+    TRACK_STILL_STARTING: "Текущий трек еще загружается, пожалуйста, подождите..."
   },
   OTHER: {
     REQUESTED_BY: "Запросил",
@@ -169,7 +171,13 @@ module.exports = {
     CMD_DISABLED: "Команда **{command}** была выключена на данном сервере.",
     CALC: "Калькулятор",
     CALC_ERR: "При выполнении вычислений произошла ошибка.",
+    STARBOARD_ENABLED: "Звездная доска успешно включена в канале {channel}",
+    STARBOARD_DISABLED: "Звездная доска успешно отключена для канала {channel}",
+    STARBOARD_NOT_ENABLED: "На этом сервере еще нет звездной доски.",
+    STARBOARD_ALREADY_ENABLED: "На этом сервере уже есть звездная доска!",
     PROVIDE_LOCALE: "Пожалуйста, укажите локаль!",
+    PROVIDE_OPTION: "Пожалуйста, предоставьте опцию! ({options})",
+    PROVIDE_CHANNEL: "Пожалуйста, предоставьте канал!",
     LOCALE_NOT_AVAILABLE: "Эта локаль недоступна. Доступные локали:",
     LOCALES_LIST: "Доступные локали:",
     MUST_BE_A_NUMBER: "Ожидалось число на месте **{args}**.",
