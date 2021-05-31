@@ -1,8 +1,5 @@
-const { owners } = require("../../config.json");
-
 module.exports = {
   name: "help",
-  description: "",
   category: "general",
   aliases: ["h"],
   cooldown: 2,
