@@ -16,17 +16,17 @@ module.exports = {
       if (botVoice && userVoice && userVoice !== botVoice) {
         return message.channel.send(lang.MUSIC.MUST_BE_IN_SAME_VC);
       }
-  
-      if (  !queue) {
+
+      if (!botVoice) {
         return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
       }
-      
-      try {
+
+      if (!queue && botVoice) {
+        bot.channels.cache.get(botVoice.id).leave()
+        message.channel.send(lang.MUSIC.CHANNEL_LEFT);
+      } else {
         bot.player.stop(message);
         message.channel.send(lang.MUSIC.CHANNEL_LEFT);
-      } catch (e) {
-        bot.sendErrorLog(bot, e, e?.type, e?.stack)
-        message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
       }
     },
   };
