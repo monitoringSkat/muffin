@@ -11,7 +11,7 @@ module.exports = {
     const botVoice = message.guild.me.voice.channel;
     const queue = await bot.player.getQueue(message);
 
-    if (userVoice) {
+    if (!userVoice) {
       return message.channel.send(lang.MUSIC.MUST_BE_IN_VC);
     }
 
