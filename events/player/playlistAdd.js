@@ -6,10 +6,10 @@ module.exports = {
 
     const embed = bot.buildEmbed(message)
     .setAuthor(lang.MUSIC.PLAYLIST_ADDED)
-    .setTitle(playlist.title)
+    .setTitle(bot.escapeMarkdown(playlist.title))
     .setURL(playlist.url)
     .setThumbnail(playlist.thumbnail)
-    .addField(lang.OTHER.REQUESTED_BY, message.author.tag, true)
+    .addField(lang.OTHER.REQUESTED_BY, bot.escapeMarkdown(message.author.tag), true)
     .addField(lang.MUSIC.TRACKS, playlist.tracks.length, true);
 
     return message.reply(embed);
