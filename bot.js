@@ -35,9 +35,6 @@ bot.player = new Player(bot, {
   leaveOnEmptyCooldown: 300000,
   leaveOnStop: true,
   enableLive: true,
-  ytdlDownloadOptions: {
-    filter: "audioonly",
-  },
 });
 bot.starboards = new MuffinStarboards(bot, {
   storage: false
