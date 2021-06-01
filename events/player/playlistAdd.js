@@ -5,7 +5,7 @@ module.exports = {
     const lang = await bot.getGuildLang(message.guild.id);
 
     const embed = bot.buildEmbed(message)
-    .setAuthor(lang.MUSIC.QUEUED)
+    .setAuthor(lang.MUSIC.PLAYLIST_ADDED)
     .setTitle(playlist.title)
     .setURL(playlist.url)
     .setThumbnail(playlist.thumbnail)
