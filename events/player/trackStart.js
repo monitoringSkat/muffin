@@ -13,7 +13,6 @@ module.exports = {
       .addField(lang.MUSIC.UPLOADED_BY, track.author, true)
       .addField(lang.MUSIC.DURATION, track.duration, true);
 
-
       return message.reply(embed);
     },
   };
