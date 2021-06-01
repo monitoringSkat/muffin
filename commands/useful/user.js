@@ -10,11 +10,15 @@ module.exports = {
 
         const username = bot.escapeMarkdown(member.user.username);
         const tag = bot.escapeMarkdown(member.user.tag);
-        const nickname = bot.escapeMarkdown(member.nickname);
-        let title = `**${nickname}** | **${tag}**`;
-        if (!nickname) title = tag;
+        const nickname = member.nickname;
+        let title = [];
+        if (!nickname) title = `**${tag}**`;
+        else title = `**${bot.escapeMarkdown(nickname)}** | **${tag}**`;
 
-        if (username === ":tada:" || nickname === ":tada:") {
+        if (username === ":tada:" ||
+            nickname === ":tada:" ||
+            username === "🎉" || 
+            nickname === "🎉") {
           return message.react("🎉")
         }
 
