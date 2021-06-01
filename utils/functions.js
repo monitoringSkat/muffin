@@ -262,7 +262,7 @@ function buildEmbed(message) {
  * @returns {string}
  */
  function escapeMarkdown(string) {
-  if(!string) throw new Error("no string provided! (bot.escapeMarkdown}")
+  if(!string) throw new Error("no string provided! (bot.escapeMarkdown)")
   else return Util.escapeMarkdown(string, {
       codeBlock: true,
        spoiler: true,
