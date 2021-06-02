@@ -231,12 +231,6 @@ const formatDate = (date) => dayjs(date).format("DD.MM.YYYY, HH:mm:ss");
  */
 const toCapitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
-function getLanguages() {
-  return fs
-    .readdirSync("./locales/")
-    .filter((f) => f.endsWith(".js"))
-    .map((la) => la.slice(0, -3));
-}
 
 function formatNumber(n) {
   return n.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ");
@@ -271,7 +265,6 @@ function buildEmbed(message) {
        codeBlockContent: true,
     });
 }
-
 
 /**
  *
@@ -308,7 +301,6 @@ module.exports = {
   updateGuildById,
   removeGuild,
   findMember,
-  getLanguages,
   formatNumber,
   buildEmbed,
   escapeMarkdown,
