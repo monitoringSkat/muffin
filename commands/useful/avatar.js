@@ -10,7 +10,7 @@ module.exports = {
     const avatar = member.user.displayAvatarURL({ format: "png", size: 2048, dynamic: true });
 
     const embed = bot.buildEmbed(message)
-      .setTitle(lang.MEMBER.AVATAR.replace("{username}", member.user.username))
+      .setTitle(lang.MEMBER.AVATAR.replace("{username}", bot.escapeMarkdown(member.user.username)))
       .setURL(avatar)
       .setImage(avatar);
 
