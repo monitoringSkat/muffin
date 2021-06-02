@@ -3,7 +3,7 @@ const os = require("os");
 module.exports = {
   name: "about",
   category: "general",
-  aliases: ["bot", "botinfo", "info", "ping", "stats"],
+  aliases: ["bot", "botinfo", "info", "stats"],
   cooldown: 2,
   botPermissions: ["EMBED_LINKS"],
   async execute(bot, message) {
