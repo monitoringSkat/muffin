@@ -3,6 +3,9 @@ module.exports = {
   type: "bot",
   async execute(bot, guild) {
     await bot.addGuild(guild.id);
+    if (guild.region === "russia") {
+      bot.updateGuildById(message.guild.id, { locale: "ru_ru" })
+    };
 
     // if(guild.members.cache.size < 5) {
     //  return guild.leave();
