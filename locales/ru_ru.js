@@ -43,7 +43,8 @@ module.exports = {
     ID: "ID пользователя",
     CREATION_DATE: "Дата создания",
     CUSTOM_STATUS: "Пользовательский статус",
-    ROLES: "Роли"
+    ROLES: "Роли",
+    HUGS: "обнимает"
   },
   GUILD: {
     NOT_FOUND: "Сервер не найден.",

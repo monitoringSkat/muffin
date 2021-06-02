@@ -43,7 +43,11 @@ module.exports = {
     ID: "User ID",
     CREATION_DATE: "Creation date",
     CUSTOM_STATUS: "Custom status",
-    ROLES: "Roles"
+    ROLES: "Roles",
+    HUGS: "hugs",
+    HUGS_THEMSELVES: "hugs themselves",
+    SLAPS: "slaps",
+    SLAPS_THEMSELVES: "slaps themselves"
   },
   GUILD: {
     NOT_FOUND: "Guild not found.",
