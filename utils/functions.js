@@ -246,7 +246,7 @@ function buildEmbed(message) {
 
   const avatar = message.author.displayAvatarURL({ dynamic: true });
   return new MessageEmbed()
-    .setFooter(message.author.tag, avatar)
+    .setFooter(escapeMarkdown(message.author.tag), avatar)
     .setColor(embedColor)
     .setTimestamp();
 }
