@@ -46,9 +46,18 @@ module.exports = {
     ROLES: "Роли",
     HUGS: "обнимает"
   },
-  GUILD: {
-    NOT_FOUND: "Сервер не найден.",
-    LEFT: "Я успешно покинул сервер **{guild}**.",
+  SERVER: {
+    ID: "ID сервера",
+    OWNER: "Владелец",
+    VERIFICATION_LEVEL: "Уровень проверки",
+    LEVELS: {
+      NONE: "Отсутствует",
+      LOW: "Низкий",
+      MEDIUM: "Средний",
+      HIGH: "Высокий",
+      VERY_HIGH: "Очень высокий"
+    },
+    CREATION_DATE: "Дата создания"
   },
   IMAGE: {
     FAILED_TO_LOAD: "Нажмите сюда, если изображение не загрузилось.",

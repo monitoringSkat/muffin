@@ -49,9 +49,18 @@ module.exports = {
     SLAPS: "slaps",
     SLAPS_THEMSELVES: "slaps themselves"
   },
-  GUILD: {
-    NOT_FOUND: "Guild not found.",
-    LEFT: "I've successfully left the **{guild}** guild.",
+  SERVER: {
+    ID: "Server ID",
+    OWNER: "Owner",
+    VERIFICATION_LEVEL: "Verification level",
+    LEVELS: {
+      NONE: "None",
+      LOW: "Low",
+      MEDIUM: "Medium",
+      HIGH: "High",
+      VERY_HIGH: "Very high"
+    },
+    CREATION_DATE: "Creation date"
   },
   IMAGE: {
     FAILED_TO_LOAD: "Click here if the image failed to load.",
