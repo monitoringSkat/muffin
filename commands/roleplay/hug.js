@@ -7,10 +7,10 @@ module.exports = {
     botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
     async execute(bot, message, args) {
         const lang = await bot.getGuildLang(message.guild.id);
-        const member = await bot.findMember(message, args, true);
+        const member = await bot.findMember(message, args, false);
         let action = `${lang.MEMBER.HUGS} ${bot.escapeMarkdown(member.user.tag)}`
         if (member.user.id === message.author.id || !member) {
-            action = lang.MEMBER.HUGS_THEMSELVES
+            return message.channel.send(lang.MEMBER.CANT_HUG_YOURSELF)
         };
         const gif = await fetch(`https://nekos.life/api/v2/img/hug`)
             .then((res) => res.json());
