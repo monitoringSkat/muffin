@@ -21,6 +21,8 @@ module.exports = {
           **${lang.SERVER.CREATION_DATE}:** ${bot.formatDate(guild.createdAt)}
           **${lang.SERVER.INVITES}:** ${serverInvites.size}
           **${lang.SERVER.BANS}:** ${serverBans.size}
+          **${lang.SERVER.BOOSTS.COUNT}:** ${guild.premiumSubscriptionCount}
+          **${lang.SERVER.BOOSTS.LEVEL}:** ${guild.premiumTier}
           `)
           .addField(lang.SERVER.MEMBERS, `
           **${lang.SERVER.MEMBERS_TOTAL}:** ${guild.members.cache.size}
