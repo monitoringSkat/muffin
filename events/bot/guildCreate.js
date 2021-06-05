@@ -5,7 +5,7 @@ module.exports = {
     await bot.addGuild(guild.id);
 
     if (guild.region === "russia") {
-      bot.updateGuildById(message.guild.id, { locale: "ru_ru" })
+      bot.updateGuildById(guild.id, { locale: "ru_ru" })
     };
   },
 };
