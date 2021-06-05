@@ -27,7 +27,7 @@
     "discord-player": "^4.1.0",
     "discord-starboards": "^2.2.3",
     "discord-temp-channels": "^2.0.0",
-    "discord.js": "^12.5.3",
+    "discord.js": "^13.0.0-dev.f7e420bf290f5404e8b99b8896c63e178f77bbfc",
     "ffmpeg-static": "^4.3.0",
     "glob": "^7.1.7",
     "mongoose": "^5.12.13",
