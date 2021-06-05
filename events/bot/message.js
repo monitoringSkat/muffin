@@ -3,15 +3,14 @@ module.exports = {
   type: "bot",
   async execute(bot, message) {
     if (message.channel.type === "dm") return;
-    if (!message.channel.permissionsFor(message.guild.me).has("SEND_MESSAGES"))
-      return;
+    if (!message.channel.permissionsFor(message.guild.me).has("SEND_MESSAGES")) return;
+    if (!message.guild.available) return;
 
     const { owners } = require("../../config.json");
     const guildId = message.guild.id;
     const userId = message.author.id;
     const cooldowns = bot.cooldowns;
     const guild = await bot.getGuildById(guildId);
-    const user = await bot.getUserById(userId, guildId);
     const mentions = message.mentions.members;
     const disabledCommands = guild?.disabled_commands;
     const lang = await bot.getGuildLang(guildId);
