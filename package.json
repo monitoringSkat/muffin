@@ -1,6 +1,6 @@
 {
   "name": "muffin",
-  "version": "0.7.0-alpha",
+  "version": "0.7.0-pre.1",
   "description": "A feature-rich, open-source bot for Discord servers.",
   "main": "./bot.js",
   "engines": {
