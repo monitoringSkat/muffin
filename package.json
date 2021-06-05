@@ -1,7 +1,7 @@
 {
   "name": "muffin",
-  "version": "0.6.2",
-  "description": "Yet another Discord bot.",
+  "version": "0.7.0",
+  "description": "A feature-rich, open-source bot for Discord servers.",
   "main": "./bot.js",
   "engines": {
     "node": ">=14.0.0"
@@ -13,7 +13,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./bot.js",
-    "normal": "node ."
+    "prod": "node ."
   },
   "author": "Tegnio",
   "license": "GPL-3.0",

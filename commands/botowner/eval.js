@@ -12,6 +12,10 @@ module.exports = {
       }
 
       let evaled = await eval(toEval);
+      evaled = require("util").inspect(evaled, {
+        depth: 0,
+        maxArrayLength: null,
+      });
 
       const embed = bot.buildEmbed(message)
       .setDescription(`\`\`\`js\n${evaled}\`\`\``);

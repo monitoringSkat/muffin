@@ -42,12 +42,36 @@ module.exports = {
     },
     ID: "User ID",
     CREATION_DATE: "Creation date",
+    JOIN_DATE: "Join date",
+    NOT_JOINED: "Not joined",
     CUSTOM_STATUS: "Custom status",
-    ROLES: "Roles"
+    ROLES: "Roles",
+    HUGS: "hugs",
+    CANT_HUG_YOURSELF: "You can't hug yourself.",
+    SLAPS: "slaps",
+    SLAPS_THEMSELVES: "slaps themselves",
+    FEEDS: "feeds",
+    FEEDS_THEMSELVES: "feeds themselves"
   },
-  GUILD: {
-    NOT_FOUND: "Guild not found.",
-    LEFT: "I've successfully left the **{guild}** guild.",
+  SERVER: {
+    ID: "Server ID",
+    OWNER: "Owner",
+    VERIFICATION_LEVEL: "Verification level",
+    LEVELS: {
+      NONE: "None",
+      LOW: "Low",
+      MEDIUM: "Medium",
+      HIGH: "High",
+      VERY_HIGH: "Very high"
+    },
+    CREATION_DATE: "Creation date",
+    INVITES: "Invites", // Genitive case
+    BANS: "Bans", // Genitive case
+    MEMBERS: "Members",
+    MEMBERS_TOTAL: "Total",
+    HUMANS: "Humans", // Genitive case
+    BOTS: "Bots", // Genitive case
+    STATUSES: "Statuses"
   },
   IMAGE: {
     FAILED_TO_LOAD: "Click here if the image failed to load.",
@@ -64,10 +88,10 @@ module.exports = {
     HELP_DESC: "Use `{prefix}` as a server prefix.",
     NO_DESCRIPTION: "Description missing",
     GENERAL: "General",
-    FUN: "Fun",
     MUSIC: "Music",
     NSFW: "NSFW",
     USEFUL: "Useful",
+    ROLEPLAY: "Roleplay",
     SETTINGS: "Settings",
     NSFW_ONLY: "This channel is not suitable for this kind of content!",
     OWNER_ONLY: "This command can be used only by the owner!",
@@ -77,7 +101,7 @@ module.exports = {
     USAGE: "Usage",
     BOT_PERMS: "Bot Permissions",
     MEMBER_PERMS: "Member Permissions",
-    CMD_NOT_FOUND: "There is no command named **{command}**!",
+    CMD_NOT_FOUND: "The **{command}** command does not exist.",
   },
   PERMISSIONS: {
     CREATE_INSTANT_INVITE: "Create invites",

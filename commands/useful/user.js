@@ -6,8 +6,7 @@ module.exports = {
     botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
     async execute(bot, message, args) {
         const lang = await bot.getGuildLang(message.guild.id);
-        let member = await bot.findMember(message, args, true);
-
+        const member = await bot.findMember(message, args, true);
         const username = bot.escapeMarkdown(member.user.username);
         const tag = bot.escapeMarkdown(member.user.tag);
         const nickname = member.nickname;
@@ -39,6 +38,7 @@ module.exports = {
           **${lang.MEMBER.STATUS}:** ${status}
           **${lang.MEMBER.ID}:** ${member.user.id}
           **${lang.MEMBER.CREATION_DATE}:** ${bot.formatDate(member.user.createdAt)}
+          **${lang.MEMBER.JOIN_DATE}:** ${bot.formatDate(message.guild.members.cache.get(member.user.id).joinedAt)}
           `)
           .addField(`**${lang.MEMBER.ROLES} (${roleCount}):**`, roles);
     

@@ -1,19 +1,17 @@
 const fetch = require("node-fetch");
 
 module.exports = {
-  name: "blowjob",
+  name: "holo",
   category: "nsfw",
-  aliases: ["bj", "bjob"],
   cooldown: 5,
   botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
   async execute(bot, message) {
-    const lang = await bot.getGuildLang(message.guild.id);
     const data = await fetch(
-      "https://nekos.life/api/v2/img/blowjob"
+      "https://nekobot.xyz/api/image?type=holo"
     ).then((res) => res.json());
 
     const embed = bot.buildEmbed(message)
-    .setImage(data.url);
+    .setImage(data.message);
 
     message.channel.send(embed);
   },

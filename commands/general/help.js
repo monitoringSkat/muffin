@@ -10,6 +10,7 @@ module.exports = {
     const prefix = guild.prefix;
     const cmdArgs = args[0];
     const nsfw = message.channel.nsfw;
+    const categories = await require("fs").readdirSync("../");
 
     if (cmdArgs) {
       const cmd =
@@ -51,8 +52,8 @@ module.exports = {
       .filter(({ category }) => category === "general")
       .map(({ name }) => `\`${name}\``)
       .join(", ") || lang.GLOBAL.NOTHING;
-    const funCmds = commands
-      .filter(({ category }) => category === "fun")
+    const roleplayCmds = commands
+      .filter(({ category }) => category === "roleplay")
       .map(({ name }) => `\`${name}\``)
       .join(", ") || lang.GLOBAL.NOTHING;
     const musicCmds = commands
@@ -74,7 +75,6 @@ module.exports = {
 
     const embed = bot.buildEmbed(message)
       .addField(lang.HELP.GENERAL, generalCmds)
-      // .addField(lang.HELP.FUN, funCmds)
       .addField(lang.HELP.MUSIC, musicCmds)
       .addField(lang.HELP.USEFUL, usefulCmds);
     if (nsfw) {
@@ -83,6 +83,7 @@ module.exports = {
        embed.addField(lang.HELP.NSFW, lang.HELP.NSFW_ONLY);
        }
     embed
+      .addField(lang.HELP.ROLEPLAY, roleplayCmds)
       .addField(lang.HELP.SETTINGS, settingsCmds)
       .setDescription(lang.HELP.HELP_DESC.replace("{prefix}", prefix))
       .setTitle(lang.HELP.HELP);

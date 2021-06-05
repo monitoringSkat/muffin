@@ -6,7 +6,6 @@ module.exports = {
   cooldown: 5,
   botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
   async execute(bot, message) {
-    const lang = await bot.getGuildLang(message.guild.id);
     const data = await fetch(
       "https://nekobot.xyz/api/image?type=pussy"
     ).then((res) => res.json());

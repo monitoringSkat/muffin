@@ -30,14 +30,11 @@ bot.config = require("./config.json");
 bot.player = new Player(bot, {
   autoSelfDeaf: true,
   leaveOnEnd: true,
-  leaveOnEndCooldown: 300000,
+  leaveOnEndCooldown: 180000,
   leaveOnEmpty: true,
-  leaveOnEmptyCooldown: 300000,
+  leaveOnEmptyCooldown: 180000,
   leaveOnStop: true,
   enableLive: true,
-  ytdlDownloadOptions: {
-    filter: "audioonly",
-  },
 });
 bot.starboards = new MuffinStarboards(bot, {
   storage: false

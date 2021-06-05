@@ -18,11 +18,11 @@ module.exports = {
     });
 
     const embed = bot.buildEmbed(message)
-      .setAuthor(message.guild.name, message.guild.iconURL({ dynamic: true }))
+      .setAuthor(bot.escapeMarkdown(message.guild.name), message.guild.iconURL({ dynamic: true }))
       .setTitle(lang.MUSIC.QUEUE)
       .setDescription(
         queue.tracks.map((track, i) => {
-            return `${i === 0 ? `${lang.MUSIC.NOW_PLAYING}:` : `${i}.`} **${track.title}** \`[${track.duration}]\``
+            return `${i === 0 ? `${lang.MUSIC.NOW_PLAYING}:` : `${i}.`} **${bot.escapeMarkdown(track.title)}** \`[${track.duration}]\``
           }).slice(0, 21).join("\n"))
       .addField(lang.MUSIC.PLAYBACK_PROGESS, progressBar);
 

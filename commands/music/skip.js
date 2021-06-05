@@ -35,7 +35,7 @@ module.exports = {
       }
       
       try {
-        message.channel.send(lang.MUSIC.SKIPPING.replace("{track}", track.title));
+        message.channel.send(lang.MUSIC.SKIPPING.replace("{track}", bot.escapeMarkdown(track.title)));
         bot.player.skip(message);
       } catch (e) {
         bot.sendErrorLog(bot, e, e?.type, e?.stack)
