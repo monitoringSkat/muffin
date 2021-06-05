@@ -42,12 +42,16 @@ module.exports = {
     },
     ID: "ID пользователя",
     CREATION_DATE: "Дата создания",
+    JOIN_DATE: "Дата присоединения",
+    NOT_JOINED: "Не присоединён",
     CUSTOM_STATUS: "Пользовательский статус",
     ROLES: "Роли",
     HUGS: "обнимает",
     HUGS_THEMSELVES: "обнимает себя",
     SLAPS: "даёт пощёчину",
-    SLAPS_THEMSELVES: "даёт пощёчину себе"
+    SLAPS_THEMSELVES: "даёт пощёчину себе",
+    FEEDS: "кормит",
+    FEEDS_THEMSELVES: "кормит себя"
   },
   SERVER: {
     ID: "ID сервера",

@@ -42,12 +42,16 @@ module.exports = {
     },
     ID: "User ID",
     CREATION_DATE: "Creation date",
+    JOIN_DATE: "Join date",
+    NOT_JOINED: "Not joined",
     CUSTOM_STATUS: "Custom status",
     ROLES: "Roles",
     HUGS: "hugs",
     HUGS_THEMSELVES: "hugs themselves",
     SLAPS: "slaps",
-    SLAPS_THEMSELVES: "slaps themselves"
+    SLAPS_THEMSELVES: "slaps themselves",
+    FEEDS: "feeds",
+    FEEDS_THEMSELVES: "feeds themselves"
   },
   SERVER: {
     ID: "Server ID",
@@ -97,7 +101,7 @@ module.exports = {
     USAGE: "Usage",
     BOT_PERMS: "Bot Permissions",
     MEMBER_PERMS: "Member Permissions",
-    CMD_NOT_FOUND: "There is no command named **{command}**!",
+    CMD_NOT_FOUND: "The **{command}** command does not exist.",
   },
   PERMISSIONS: {
     CREATE_INSTANT_INVITE: "Create invites",
