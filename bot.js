@@ -1,19 +1,28 @@
 require("./utils/startupCheck")();
 require("./utils/database");
-const { Collection, Client, Constants } = require("discord.js");
+const { Collection, Client, Constants, Intents } = require("discord.js");
 const config = require("./config.json");
 const { Player } = require("discord-player");
 const MuffinStarboards = require("./classes/MuffinStarboards");
 const { functions } = require("./utils/functions");
 const bot = new Client({
-  disableMentions: "all",
+  disableMentions: "everyone",
   restRequestTimeout: 30000,
-  partials: [
-    "GUILD_MEMBER",
-    "MESSAGE",
-    "USER",
-    "REACTION"
+  intents: [
+    Intents.FLAGS.GUILDS,
+    Intents.FLAGS.GUILD_MESSAGES,
+    Intents.FLAGS.GUILD_BANS,
+    Intents.FLAGS.GUILD_INVITES,
+    Intents.FLAGS.GUILD_MEMBERS,
+    Intents.FLAGS.GUILD_VOICE_STATES
   ],
+  partials: [
+    Constants.PartialTypes.GUILD_MEMBER,
+    Constants.PartialTypes.MESSAGE,
+    Constants.PartialTypes.USER,
+    Constants.PartialTypes.REACTION
+  ],
+  allowedMentions: { parse: ["roles", "users"] }
 });
 
 Constants.DefaultOptions.ws.properties.$browser = "Discord Android";
