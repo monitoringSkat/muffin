@@ -3,7 +3,7 @@ module.exports = {
     category: "useful",
     aliases: ["serverinfo", "si"],
     cooldown: 2,
-    botPermissions: ["ATTACH_FILES", "BAN_MEMBERS", "EMBED_LINKS", "MANAGE_GUILD"],
+    botPermissions: ["ATTACH_FILES", "EMBED_LINKS", "MANAGE_GUILD"],
     async execute(bot, message) {
         const lang = await bot.getGuildLang(message.guild.id);
         const guild = message.guild;
