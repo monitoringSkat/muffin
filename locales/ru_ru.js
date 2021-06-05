@@ -47,7 +47,7 @@ module.exports = {
     CUSTOM_STATUS: "Пользовательский статус",
     ROLES: "Роли",
     HUGS: "обнимает",
-    HUGS_THEMSELVES: "обнимает себя",
+    CANT_HUG_YOURSELF: "Вы не можете обнять себя.",
     SLAPS: "даёт пощёчину",
     SLAPS_THEMSELVES: "даёт пощёчину себе",
     FEEDS: "кормит",

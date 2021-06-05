@@ -47,7 +47,7 @@ module.exports = {
     CUSTOM_STATUS: "Custom status",
     ROLES: "Roles",
     HUGS: "hugs",
-    HUGS_THEMSELVES: "hugs themselves",
+    CANT_HUG_YOURSELF: "You can't hug yourself.",
     SLAPS: "slaps",
     SLAPS_THEMSELVES: "slaps themselves",
     FEEDS: "feeds",
