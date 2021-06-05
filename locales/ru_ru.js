@@ -44,7 +44,10 @@ module.exports = {
     CREATION_DATE: "Дата создания",
     CUSTOM_STATUS: "Пользовательский статус",
     ROLES: "Роли",
-    HUGS: "обнимает"
+    HUGS: "обнимает",
+    HUGS_THEMSELVES: "обнимает себя",
+    SLAPS: "даёт пощёчину",
+    SLAPS_THEMSELVES: "даёт пощёчину себе"
   },
   SERVER: {
     ID: "ID сервера",
@@ -57,7 +60,14 @@ module.exports = {
       HIGH: "Высокий",
       VERY_HIGH: "Очень высокий"
     },
-    CREATION_DATE: "Дата создания"
+    CREATION_DATE: "Дата создания",
+    INVITES: "Приглашений", // Родительный падеж
+    BANS: "Банов", // Родительный падеж
+    MEMBERS: "Участники",
+    MEMBERS_TOTAL: "Всего",
+    HUMANS: "Людей", // Родительный падеж
+    BOTS: "Ботов", // Родительный падеж
+    STATUSES: "Статусы"
   },
   IMAGE: {
     FAILED_TO_LOAD: "Нажмите сюда, если изображение не загрузилось.",

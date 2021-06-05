@@ -60,7 +60,14 @@ module.exports = {
       HIGH: "High",
       VERY_HIGH: "Very high"
     },
-    CREATION_DATE: "Creation date"
+    CREATION_DATE: "Creation date",
+    INVITES: "Invites", // Genitive case
+    BANS: "Bans", // Genitive case
+    MEMBERS: "Members",
+    MEMBERS_TOTAL: "Total",
+    HUMANS: "Humans", // Genitive case
+    BOTS: "Bots", // Genitive case
+    STATUSES: "Statuses"
   },
   IMAGE: {
     FAILED_TO_LOAD: "Click here if the image failed to load.",
