@@ -38,6 +38,7 @@ module.exports = {
           **${lang.MEMBER.STATUS}:** ${status}
           **${lang.MEMBER.ID}:** ${member.user.id}
           **${lang.MEMBER.CREATION_DATE}:** ${bot.formatDate(member.user.createdAt)}
+          **${lang.MEMBER.JOIN_DATE}:** ${bot.formatDate(message.guild.members.cache.get(member.user.id).joinedAt)}
           `)
           .addField(`**${lang.MEMBER.ROLES} (${roleCount}):**`, roles);
     
