@@ -67,6 +67,10 @@ module.exports = {
     CREATION_DATE: "Creation date",
     INVITES: "Invites", // Genitive case
     BANS: "Bans", // Genitive case
+    BOOSTS: {
+      COUNT: "Boosts count",
+      LEVEL: "Boost level"
+    },
     MEMBERS: "Members",
     MEMBERS_TOTAL: "Total",
     HUMANS: "Humans", // Genitive case
