@@ -8,6 +8,7 @@ const { functions } = require("./utils/functions");
 const bot = new Client({
   disableMentions: "everyone",
   restRequestTimeout: 30000,
+  retryLimit: 100,
   intents: [
     Intents.FLAGS.GUILDS,
     Intents.FLAGS.GUILD_MESSAGES,
