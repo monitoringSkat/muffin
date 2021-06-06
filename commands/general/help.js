@@ -35,12 +35,12 @@ module.exports = {
       const embed = bot.buildEmbed(message)
         .setTitle(`\`${cmd.name}\``)
         .setDescription(description)
-        .addField(lang.HELP.CATEGORY, lang.HELP[cmd.category.toUpperCase()], true)
+        .addField(lang.HELP.CATEGORY, lang.HELP[cmd.category.toUpperCase().toString()], true)
         .addField(lang.HELP.COOLDOWN, cooldown, true)
         .addField(lang.HELP.ALIASES, aliases)
         .addField(lang.HELP.USAGE, usage)
-        .addField(lang.HELP.BOT_PERMS, botPerms, true)
-        .addField(lang.HELP.MEMBER_PERMS, memberPerms, true);
+        .addField(lang.HELP.BOT_PERMS, botPerms.join("\n"), true)
+        .addField(lang.HELP.MEMBER_PERMS, memberPerms.join("\n"), true);
 
       return message.channel.send(embed);
     }

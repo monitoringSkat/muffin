@@ -97,6 +97,7 @@ module.exports = {
     USEFUL: "Useful",
     ROLEPLAY: "Roleplay",
     SETTINGS: "Settings",
+    OWNER: "Owner",
     NSFW_ONLY: "This channel is not suitable for this kind of content!",
     OWNER_ONLY: "This command can be used only by the owner!",
     CATEGORY: "Category",
