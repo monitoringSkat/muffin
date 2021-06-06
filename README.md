@@ -1,7 +1,6 @@
 <img align="right" src="./assets/avatar.png" height="200" width="200">
 
-# Muffin
-### Meet Muffin - a multipurpose, highly customizable and open source Discord bot with bunch of useful features for your server!
+<h2 align="left">Meet <b>Muffin</b> - a multipurpose, highly customizable and open source Discord bot with bunch of useful features for your server!</h2>
 
 [![Discord server badge](https://img.shields.io/discord/844175881593552967?color=%237289DA)](https://discord.gg/zgdffUdxSj)
 [![Latest release badge](https://img.shields.io/github/v/release/Tegnio/muffin)](https://github.com/Tegnio/muffin/releases)
