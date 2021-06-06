@@ -139,6 +139,7 @@ module.exports = {
     MANAGE_ROLES: "Управлять ролями",
     MANAGE_WEBHOOKS: "Управлять вебхуками",
     MANAGE_EMOJIS: "Управлять эмодзи",
+    STAGE_MODERATOR: "Модерировать трибуну"
   },
   DESCRIPTIONS: {
     HELP: "Показывает все команды или информацию о конкретной команде",

@@ -139,6 +139,7 @@ module.exports = {
     MANAGE_ROLES: "Manage roles",
     MANAGE_WEBHOOKS: "Manage webhooks",
     MANAGE_EMOJIS: "Manage emojis",
+    STAGE_MODERATOR: "Stage moderator"
   },
   DESCRIPTIONS: {
     HELP: "Shows all commands or shows information about a specific command",
