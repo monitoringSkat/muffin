@@ -1,6 +1,6 @@
 module.exports = {
   name: "eval",
-  category: "botowner",
+  category: "owner",
   aliases: ["e"],
   botPermissions: ["EMBED_LINKS"],
   async execute(bot, message, args) {

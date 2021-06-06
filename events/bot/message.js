@@ -56,7 +56,7 @@ module.exports = {
           }
         }
 
-        if (cmd.category === "botowner" && !owners.includes(message.author.id)) {
+        if (cmd.category === "owner" && !owners.includes(message.author.id)) {
           return;
         }
 

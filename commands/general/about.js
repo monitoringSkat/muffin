@@ -19,7 +19,7 @@ module.exports = {
         **${lang.BOT.SHARDS}**: ${bot.formatNumber(bot.ws.totalShards)}
         **${lang.BOT.SERVERS}**: ${bot.formatNumber(bot.guilds.cache.size)}
         **${lang.BOT.USERS}**: ${bot.formatNumber(bot.users.cache.size)}
-        **${lang.BOT.COMMANDS}**: ${bot.commands.filter((cmd) => cmd.category !== "botowner").size}
+        **${lang.BOT.COMMANDS}**: ${bot.commands.filter((cmd) => cmd.category !== "owner").size}
         **${lang.BOT.VOICE_CONNECTIONS}**: ${bot.formatNumber(bot.voice.connections.size)}
         `, true)
         .addField(lang.BOT.USEFUL_LINKS,
