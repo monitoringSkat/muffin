@@ -14,6 +14,6 @@ module.exports = {
       .setURL(avatar)
       .setImage(avatar);
 
-    message.channel.send(embed);
+    message.reply(embed);
   },
 };
