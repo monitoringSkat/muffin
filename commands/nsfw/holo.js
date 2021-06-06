@@ -13,6 +13,6 @@ module.exports = {
     const embed = bot.buildEmbed(message)
     .setImage(data.message);
 
-    message.channel.send(embed);
+    message.reply(embed);
   },
 };
