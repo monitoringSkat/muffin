@@ -27,6 +27,6 @@ module.exports = {
       .addField(lang.MUSIC.PLAYBACK_PROGESS, progressBar);
 
 
-    message.channel.send(embed);
+    message.reply(embed);
   },
 };

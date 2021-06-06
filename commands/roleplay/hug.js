@@ -10,7 +10,7 @@ module.exports = {
         const member = await bot.findMember(message, args, false);
         let action = `${lang.MEMBER.HUGS} ${bot.escapeMarkdown(member.user.tag)}`
         if (member.user.id === message.author.id || !member) {
-            return message.channel.send(lang.MEMBER.CANT_HUG_YOURSELF)
+            return message.reply(lang.MEMBER.CANT_HUG_YOURSELF)
         };
         const gif = await fetch(`https://nekos.life/api/v2/img/hug`)
             .then((res) => res.json());
@@ -19,6 +19,6 @@ module.exports = {
         .setTitle(`${bot.escapeMarkdown(message.author.tag)} ${action}`)
         .setImage(gif.url);
 
-        message.channel.send(embed);
+        message.reply(embed);
     }
 }

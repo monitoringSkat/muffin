@@ -16,7 +16,7 @@ module.exports = {
       const cmd =
         bot.commands.get(cmdArgs) || bot.commands.get(bot.aliases.get(cmdArgs));
       if (!cmd || cmd.category === "owner" && !bot.config.owners.includes(message.author.id)) {
-        return message.channel.send(lang.HELP.CMD_NOT_FOUND);
+        return message.reply(lang.HELP.CMD_NOT_FOUND);
         }
 
       const description = lang.DESCRIPTIONS[cmd.name.toUpperCase()] || lang.HELP.NO_DESCRIPTION;
@@ -42,7 +42,7 @@ module.exports = {
         .addField(lang.HELP.BOT_PERMS, botPerms.join("\n"), true)
         .addField(lang.HELP.MEMBER_PERMS, memberPerms.join("\n"), true);
 
-      return message.channel.send(embed);
+      return message.reply(embed);
     }
 
     const commands = bot.commands;
@@ -87,6 +87,6 @@ module.exports = {
       .setDescription(lang.HELP.HELP_DESC.replace("{prefix}", prefix))
       .setTitle(lang.HELP.HELP);
 
-    message.channel.send(embed);
+    message.reply(embed);
   },
 };

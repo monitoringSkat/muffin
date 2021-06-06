@@ -8,7 +8,7 @@ module.exports = {
     const toEval = args.join(" ");
     try {
       if (!toEval) {
-        return message.channel.send(lang.GLOBAL.PROVIDE_ARGS);
+        return message.reply(lang.GLOBAL.PROVIDE_ARGS);
       }
 
       let evaled = await eval(toEval);
@@ -20,13 +20,13 @@ module.exports = {
       const embed = bot.buildEmbed(message)
       .setDescription(`\`\`\`js\n${evaled}\`\`\``);
 
-      message.channel.send(embed);
+      message.reply(embed);
     } catch (error) {
       const errorEmbed = bot.buildEmbed(message)
         .setTitle(lang.GLOBAL.ERROR)
         .setDescription(`\`\`\`js\n${error}\`\`\``);
 
-      message.channel.send(errorEmbed);
+      message.reply(errorEmbed);
     }
   },
 };

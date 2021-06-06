@@ -19,6 +19,6 @@ module.exports = {
         .setTitle(`${bot.escapeMarkdown(message.author.tag)} ${action}`)
         .setImage(gif.url);
 
-        message.channel.send(embed);
+        message.reply(embed);
     }
 }

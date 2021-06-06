@@ -12,38 +12,38 @@ module.exports = {
     const queue = await bot.player.getQueue(message);
 
     if (!userVoice) {
-      return message.channel.send(lang.MUSIC.MUST_BE_IN_VC);
+      return message.reply(lang.MUSIC.MUST_BE_IN_VC);
     }
 
     if (botVoice && userVoice && userVoice !== botVoice) {
-      return message.channel.send(lang.MUSIC.MUST_BE_IN_SAME_VC);
+      return message.reply(lang.MUSIC.MUST_BE_IN_SAME_VC);
     }
 
     if (!bot.player.isPlaying(message) || !queue || newVol && !queue) {
-      return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
+      return message.reply(lang.MUSIC.EMPTY_QUEUE);
     }
 
     if (!newVol && queue) {
-      return message.channel.send(lang.MUSIC.CURRENT_VOLUME
+      return message.reply(lang.MUSIC.CURRENT_VOLUME
         .replace("{vol}", bot.player.queues.get(message.guild.id).volume));
     }
 
     if (isNaN(newVol)) {
-      return message.channel.send(lang.OTHER.MUST_BE_A_NUMBER
+      return message.reply(lang.OTHER.MUST_BE_A_NUMBER
         .replace("{args}", newVol));
     }
 
     if (newVol < 0 || newVol > 200) {
-      return message.channel.send(lang.MUSIC.VOLUME_VALUE_LIMIT);
+      return message.reply(lang.MUSIC.VOLUME_VALUE_LIMIT);
     }
 
     try {
       bot.player.setVolume(message, newVol);
-      message.channel.send(lang.MUSIC.VOLUME_UPDATED
+      message.reply(lang.MUSIC.VOLUME_UPDATED
         .replace("{newVol}", newVol));
     } catch (e) {
       bot.sendErrorLog(bot, e, e?.type, e?.stack)
-      message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
+      message.reply(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
     }
   },
 };

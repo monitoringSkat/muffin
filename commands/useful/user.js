@@ -42,7 +42,7 @@ module.exports = {
           `)
           .addField(`**${lang.MEMBER.ROLES} (${roleCount}):**`, roles);
     
-        message.channel.send(embed);
+        message.reply(embed);
       },
   };
   

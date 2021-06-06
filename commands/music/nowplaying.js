@@ -10,10 +10,10 @@ module.exports = {
     const queue = await bot.player.getQueue(message);
 
         if (!playing) {
-          return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
+          return message.reply(lang.MUSIC.EMPTY_QUEUE);
         }
         if (!queue) {
-          return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
+          return message.reply(lang.MUSIC.EMPTY_QUEUE);
         }
 
         const track = bot.player.nowPlaying(message);
@@ -32,6 +32,6 @@ module.exports = {
         .addField(lang.MUSIC.VOLUME, `${volume}%`, true)
         .addField(lang.MUSIC.PLAYBACK_PROGESS, progressBar);
 
-    message.channel.send(embed);
+    message.reply(embed);
   },
 };

@@ -29,6 +29,6 @@ module.exports = {
           [${lang.BOT.SOURCE_CODE}](${bot.package.repository.url})
           `)
         
-    message.channel.send(embed);
+    message.reply(embed);
   },
 };

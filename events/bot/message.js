@@ -36,7 +36,7 @@ module.exports = {
     const command = args.shift().toLowerCase();
 
     if (message.mentions.has(bot.user.id) && !command) {
-      message.channel.send(lang.HELP.HELP_DESC
+      message.reply(lang.HELP.HELP_DESC
         .replace("{prefix}", serverPrefix));
     }
 
@@ -51,7 +51,7 @@ module.exports = {
 
         if (disabledCommands !== null && disabledCommands.length > 0) {
           if (disabledCommands?.includes(cmd.name)) {
-            return message.channel.send(lang.OTHER.CMD_DISABLED
+            return message.reply(lang.OTHER.CMD_DISABLED
             .replace("{command}", cmd.name));
           }
         }
@@ -70,7 +70,7 @@ module.exports = {
           });
 
           if (neededPermissions[0]) {
-            return message.channel.send(lang.BOT.NEED_PERMS
+            return message.reply(lang.BOT.NEED_PERMS
               .replace("{neededPermissions}", neededPermissions
                 .map((p) => lang.PERMISSIONS[p.toUpperCase()])
                 .join(", ")));
@@ -87,7 +87,7 @@ module.exports = {
           });
 
           if (neededPermissions.length > 0) {
-            return message.channel.send(lang.MEMBER.NEED_PERMS
+            return message.reply(lang.MEMBER.NEED_PERMS
               .replace("{neededPermissions}", neededPermissions
                 .map((p) => lang.PERMISSIONS[p.toUpperCase()])
                 .join(", "))
@@ -100,7 +100,7 @@ module.exports = {
           .setTitle(lang.HELP.NSFW_ONLY)
           .setImage(`https://support.discord.com/hc/article_attachments/360007795191/2_.jpg`);
 
-          return message.channel.send(embed);
+          return message.reply(embed);
         }
 
         if (timestamps.has(userId)) {
@@ -108,7 +108,7 @@ module.exports = {
 
           if (now < expTime) {
             const timeleft = (expTime - now) / 1000;
-            return message.channel.send(lang.MEMBER.COOLDOWN
+            return message.reply(lang.MEMBER.COOLDOWN
               .replace("{cooldown}", timeleft.toFixed(2))
               .replace("{cmd}", cmd.name));
           }
@@ -127,7 +127,7 @@ module.exports = {
         .setTitle(lang.GLOBAL.ERROR)
         .setDescription(`\`\`\`js${e}\`\`\``);
 
-      message.channel.send(embed);
+      message.reply(embed);
     }
   },
 };
