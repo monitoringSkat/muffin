@@ -11,22 +11,22 @@ module.exports = {
     const search = args.join(" ");
 
     if (!search) {
-      return message.channel.send(lang.MUSIC.PROVIDE_SEARCH);
+      return message.reply(lang.MUSIC.PROVIDE_SEARCH);
     }
 
     if (!userVoice) {
-      return message.channel.send(lang.MUSIC.MUST_BE_IN_VC);
+      return message.reply(lang.MUSIC.MUST_BE_IN_VC);
     }
 
     if (botVoice && userVoice && userVoice !== botVoice) {
-      return message.channel.send(lang.MUSIC.MUST_BE_IN_SAME_VC);
+      return message.reply(lang.MUSIC.MUST_BE_IN_SAME_VC);
     }
 
     try {
       await bot.player.play(message, search, true);
     } catch (e) {
       bot.sendErrorLog(bot, e, e?.type, e?.stack)
-      message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
+      message.reply(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
     }
   },
 };

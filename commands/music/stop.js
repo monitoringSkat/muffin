@@ -10,23 +10,23 @@ module.exports = {
       const botVoice = message.guild.me.voice.channel;
 
       if (!userVoice) {
-        return message.channel.send(lang.MUSIC.MUST_BE_IN_VC);
+        return message.reply(lang.MUSIC.MUST_BE_IN_VC);
       }
 
       if (botVoice && userVoice && userVoice !== botVoice) {
-        return message.channel.send(lang.MUSIC.MUST_BE_IN_SAME_VC);
+        return message.reply(lang.MUSIC.MUST_BE_IN_SAME_VC);
       }
 
       if (!botVoice) {
-        return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
+        return message.reply(lang.MUSIC.EMPTY_QUEUE);
       }
 
       if (!queue && botVoice) {
         bot.channels.cache.get(botVoice.id).leave()
-        message.channel.send(lang.MUSIC.CHANNEL_LEFT);
+        message.reply(lang.MUSIC.CHANNEL_LEFT);
       } else {
         bot.player.stop(message);
-        message.channel.send(lang.MUSIC.CHANNEL_LEFT);
+        message.reply(lang.MUSIC.CHANNEL_LEFT);
       }
     },
   };
