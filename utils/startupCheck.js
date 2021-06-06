@@ -1,10 +1,10 @@
 const config = require("../config.json");
+const v = require("../package.json").engines.node.slice(2);
 
 function startupCheck() {
-  const v = parseFloat(process.versions.node);
 
-  if (v < 14) {
-    throw new Error("your node.js version is outdated! Please use v14 or later");
+  if (process.versions.node < v) {
+    throw new Error(`your node.js version is outdated! Please use v${v} or later`);
   }
 
   if (!config) {
