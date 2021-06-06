@@ -16,13 +16,13 @@ module.exports = {
     const locale = args[0];
 
     if (!locale) {
-      return message.channel.send(
+      return message.reply(
         `${lang.OTHER.LOCALES_LIST} ${locales
         .map((l) => `\`${l}\``)
         .join(", ")}`);
     }
     if(!locales.includes(locale)) {
-      return message.channel.send(
+      return message.reply(
         `${lang.OTHER.LOCALE_NOT_AVAILABLE} ${locales
         .map((l) => `\`${l}\``)
         .join(", ")}`);
@@ -30,11 +30,11 @@ module.exports = {
   
   try {
     bot.updateGuildById(message.guild.id, { "locale": locale });
-    message.channel.send(lang.BOT.LOCALE_UPDATED
+    message.reply(lang.BOT.LOCALE_UPDATED
       .replace("{locale}", locale));
   } catch (e) {
       bot.sendErrorLog(bot, e, e?.type, e?.stack)
-      message.channel.send(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
+      message.reply(`${lang.GLOBAL.ERROR}\n\n\`\`\`${e.stack}\`\`\``);
     }
   }
 }
