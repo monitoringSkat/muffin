@@ -7,20 +7,20 @@ module.exports = {
     async execute(bot, message) {
         const lang = await bot.getGuildLang(message.guild.id);
         const guild = message.guild;
+        const serverOwner = await guild.fetchOwner();
         const verificationLevel = lang.SERVER.LEVELS[guild.verificationLevel.toUpperCase()];
         const serverInvites = await guild.fetchInvites();
-        const serverBans = await guild.fetchBans();
 
         const embed = bot.buildEmbed(message)
           .setTitle(bot.escapeMarkdown(guild.name))
           .setThumbnail(guild.iconURL({ dynamic: true }))
           .setDescription(`
           **${lang.SERVER.ID}:** ${guild.id}
-          **${lang.SERVER.OWNER}:** ${bot.escapeMarkdown(guild.owner.user.tag)} (${guild.owner.user.id})
+          **${lang.SERVER.OWNER}:** ${bot.escapeMarkdown(serverOwner.user.tag)} (${serverOwner.user.id})
           **${lang.SERVER.VERIFICATION_LEVEL}:** ${verificationLevel}
           **${lang.SERVER.CREATION_DATE}:** ${bot.formatDate(guild.createdAt)}
           **${lang.SERVER.INVITES}:** ${serverInvites.size}
-          **${lang.SERVER.BANS}:** ${serverBans.size}
+          **${lang.SERVER.BANS}:** ${guild.bans.cache.size}
           **${lang.SERVER.BOOSTS.COUNT}:** ${guild.premiumSubscriptionCount}
           **${lang.SERVER.BOOSTS.LEVEL}:** ${guild.premiumTier}
           `)
