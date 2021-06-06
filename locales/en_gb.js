@@ -105,7 +105,7 @@ module.exports = {
     USAGE: "Usage",
     BOT_PERMS: "Bot Permissions",
     MEMBER_PERMS: "Member Permissions",
-    CMD_NOT_FOUND: "The **{command}** command does not exist.",
+    CMD_NOT_FOUND: "Hm... I couldn't find that command 😕",
   },
   PERMISSIONS: {
     CREATE_INSTANT_INVITE: "Create invites",
