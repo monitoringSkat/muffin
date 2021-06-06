@@ -10,9 +10,10 @@ module.exports = {
       return message.channel.send(bot.lang.GLOBAL.PROVIDE_ARGS);
     }
 
-    message.channel.send(lang.OTHER.PROCESSING)
-    .then(msg => msg.edit(require('child_process')
-      .execSync(args.join(' '))
-      .toString('utf8')));
+    const result = await require('child_process')
+    .execSync(args.join(' '))
+    .toString('utf8');
+
+    message.channel.send(result, { split: true });
   }
 };
