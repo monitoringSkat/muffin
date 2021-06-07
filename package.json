@@ -1,6 +1,6 @@
 {
   "name": "muffin",
-  "version": "0.7.0",
+  "version": "0.8.0-alpha",
   "description": "Meet Muffin - a multipurpose, highly customizable and open source Discord bot with bunch of useful features for your server!",
   "main": "./bot.js",
   "engines": {
