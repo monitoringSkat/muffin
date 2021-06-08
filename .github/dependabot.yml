@@ -8,7 +8,7 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "live"
-      target-branch: "dev"
+      interval: "daily"
+    target-branch: "dev"
     labels:
       - "dependencies"
