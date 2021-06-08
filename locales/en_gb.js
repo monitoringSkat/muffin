@@ -26,7 +26,8 @@ module.exports = {
     SOURCE_CODE: "Source code",
     NEED_PERMS: "I need more permissions to execute this command: {neededPermissions}",
     LOCALE_UPDATED: "Successfully updated locale to **`{locale}`**!",
-    PREFIX_UPDATED: "Successfully updated prefix to **`{prefix}`**"
+    PREFIX_UPDATED: "Successfully updated prefix to **`{prefix}`**",
+    ROLE_MUST_BE_HIGHER: "My role must be higher than {members}'s highest role!",
   },
   MEMBER: {
     AVATAR: "{username}'s avatar",
@@ -46,6 +47,10 @@ module.exports = {
     NOT_JOINED: "Not joined",
     CUSTOM_STATUS: "Custom status",
     ROLES: "Roles",
+    NOT_FOUND: "Hm, I can't find that user!",
+    CANNOT_BE_BANNED: "This user can't be banned.",
+    BANNED: "{member} was successfully banned.",
+    BAN_REASON: "Ban reason",
     HUGS: "hugs",
     CANT_HUG_YOURSELF: "You can't hug yourself.",
     SLAPS: "slaps",

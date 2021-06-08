@@ -26,7 +26,8 @@ module.exports = {
     SOURCE_CODE: "Исходный код",
     NEED_PERMS: "Мне необходимо больше прав для выполнения команды: {neededPermissions}",
     LOCALE_UPDATED: "Локаль успешно обновлена на **`{locale}`**!",
-    PREFIX_UPDATED: "Префикс успешно обновлен на **`{prefix}`**"
+    PREFIX_UPDATED: "Префикс успешно обновлен на **`{prefix}`**",
+    ROLE_MUST_BE_HIGHER: "Моя роль должна быть выше, чем наивысшая роль {member}!",
   },
   MEMBER: {
     AVATAR: "Аватар {username}",
@@ -46,6 +47,10 @@ module.exports = {
     NOT_JOINED: "Не присоединён",
     CUSTOM_STATUS: "Пользовательский статус",
     ROLES: "Роли",
+    NOT_FOUND: "Хм, я не могу найти этого пользователя!",
+    CANNOT_BE_BANNED: "Этот пользователь не может быть забанен.",
+    BANNED: "{member} был успешно забанен.",
+    BAN_REASON: "Причина бана",
     HUGS: "обнимает",
     CANT_HUG_YOURSELF: "Вы не можете обнять себя.",
     SLAPS: "даёт пощёчину",
