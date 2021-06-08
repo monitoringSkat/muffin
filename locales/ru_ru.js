@@ -200,7 +200,9 @@ module.exports = {
     VOLUME_VALUE_LIMIT: "Значение громкости должно не быть меньше 0 и не превышать 200.",
     VOLUME_UPDATED: "Громкость плеера теперь {newVol}%.",
     CURRENT_VOLUME: "Текущая громкость плеера - {vol}%.",
-    TRACK_STILL_STARTING: "Текущий трек еще загружается, пожалуйста, подождите..."
+    TRACK_STILL_STARTING: "Текущий трек еще загружается, пожалуйста, подождите...",
+    SEARCHING_LYRICS: "Идет поиск текста для **{track}**...",
+    NO_LYRICS_FOUND: "Текст песни не найден."
   },
   OTHER: {
     REQUESTED_BY: "Запросил",

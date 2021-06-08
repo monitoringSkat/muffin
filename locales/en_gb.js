@@ -200,7 +200,9 @@ module.exports = {
     VOLUME_VALUE_LIMIT: "The volume value cannot be less than 0 and cannot exceed 200.",
     VOLUME_UPDATED: "Player volume is now {newVol}%.",
     CURRENT_VOLUME: "Current player volume is {vol}%.",
-    TRACK_STILL_STARTING: "Current track is still loading, please wait..."
+    TRACK_STILL_STARTING: "Current track is still loading, please wait...",
+    SEARCHING_LYRICS: "Searching lyrics for **{track}**...",
+    NO_LYRICS_FOUND: "No lyrics found."
   },
   OTHER: {
     REQUESTED_BY: "Requested by",
