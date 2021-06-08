@@ -56,6 +56,7 @@ module.exports = {
   SERVER: {
     ID: "Server ID",
     OWNER: "Owner",
+    NO_DESCRIPTION: "No description",
     VERIFICATION_LEVEL: "Verification level",
     LEVELS: {
       NONE: "None",
@@ -68,14 +69,23 @@ module.exports = {
     INVITES: "Invites", // Genitive case
     BANS: "Bans", // Genitive case
     BOOSTS: {
+      BOOSTS: "Boosts",
       COUNT: "Boosts count",
       LEVEL: "Boost level"
     },
-    MEMBERS: "Members",
-    MEMBERS_TOTAL: "Total",
-    HUMANS: "Humans", // Genitive case
-    BOTS: "Bots", // Genitive case
-    STATUSES: "Statuses"
+    MEMBERS: {
+      MEMBERS: "Members",
+      TOTAL: "Total",
+      HUMANS: "Humans", // Genitive case
+      BOTS: "Bots", // Genitive case
+      STATUSES: "Statuses"
+    },
+    CHANNELS: {
+      CHANNELS: "Channels",
+      TOTAL: "Total",
+      TEXT: "Text", // Genitive case
+      VOICE: "Voice" // Genitive case
+    },
   },
   IMAGE: {
     FAILED_TO_LOAD: "Click here if the image failed to load.",
