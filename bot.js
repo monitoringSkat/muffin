@@ -3,7 +3,6 @@ require("./utils/database");
 const { Collection, Client, Constants, Intents } = require("discord.js");
 const config = require("./config.json");
 const { Player } = require("discord-player");
-const MuffinStarboards = require("./classes/MuffinStarboards");
 const { functions } = require("./utils/functions");
 const bot = new Client({
   disableMentions: "everyone",
@@ -45,9 +44,6 @@ bot.player = new Player(bot, {
   leaveOnEmptyCooldown: 180000,
   leaveOnStop: true,
   enableLive: true,
-});
-bot.starboards = new MuffinStarboards(bot, {
-  storage: false
 });
 
 global.Promise = require("bluebird");
