@@ -14,7 +14,7 @@ module.exports = {
 
       if (!banReason) banReason = lang.GLOBAL.NOT_SPECIFIED;
   
-      if (!banMember.bannable || banMember.hasPermission("BAN_MEMBERS")) {
+      if (!banMember.bannable) {
         return message.channel.send(lang.MEMBER.CANNOT_BE_BANNED);
       }
   
@@ -24,7 +24,7 @@ module.exports = {
         );
       }
   
-      banMember.ban({ reason: `${bot.escapeMarkdown(message.author.tag)}: ${banReason}` });
+      banMember.ban({ reason: `${message.author.tag}: ${banReason}` });
       
       const embed = bot.buildEmbed(message)
       .setDescription(lang.MEMBER.BANNED.replace("{member}", bot.escapeMarkdown(banMember.username)))
