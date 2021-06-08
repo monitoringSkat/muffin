@@ -9,6 +9,7 @@ module.exports = {
     NOT_SPECIFIED: "Not specified",
     NOT_AVAILABLE: "Not available",
     PROVIDE_ARGS: "Please provide some arguments!",
+    REASON: "Reason",
     LONG_ARGS: "The arguments provided are too long! ({length} > {limit})",
   },
   BOT: {
@@ -49,8 +50,9 @@ module.exports = {
     ROLES: "Roles",
     NOT_FOUND: "Hm, I can't find that user!",
     CANNOT_BE_BANNED: "This user can't be banned.",
+    CANNOT_BE_KICKED: "This user can't be kicked.",
     BANNED: "{member} was successfully banned.",
-    BAN_REASON: "Ban reason",
+    KICKED: "{member} was successfully kicked.",
     HUGS: "hugs",
     CANT_HUG_YOURSELF: "You can't hug yourself.",
     SLAPS: "slaps",

@@ -9,6 +9,7 @@ module.exports = {
     NOT_SPECIFIED: "Не указано",
     NOT_AVAILABLE: "Недоступно",
     PROVIDE_ARGS: "Пожалуйста, предоставьте аргументы!",
+    REASON: "Причина",
     LONG_ARGS: "Предоставленные аргументы слишком длинны! ({length} > {limit})",
   },
   BOT: {
@@ -49,8 +50,9 @@ module.exports = {
     ROLES: "Роли",
     NOT_FOUND: "Хм, я не могу найти этого пользователя!",
     CANNOT_BE_BANNED: "Этот пользователь не может быть забанен.",
+    CANNOT_BE_KICKED: "Этот пользователь не может быть изгнан.",
     BANNED: "{member} был успешно забанен.",
-    BAN_REASON: "Причина бана",
+    KICKED: "{member} был успешно выгнан.",
     HUGS: "обнимает",
     CANT_HUG_YOURSELF: "Вы не можете обнять себя.",
     SLAPS: "даёт пощёчину",

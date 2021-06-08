@@ -28,7 +28,7 @@ module.exports = {
       
       const embed = bot.buildEmbed(message)
       .setDescription(lang.MEMBER.BANNED.replace("{member}", bot.escapeMarkdown(banMember.username)))
-      .addField(lang.MEMBER.BAN_REASON, banReason);
+      .addField(lang.GLOBAL.REASON, banReason);
 
       message.channel.send(embed);
     },
